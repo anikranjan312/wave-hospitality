@@ -32,6 +32,8 @@
    <link rel="stylesheet" href="assets/css/responsive.css">
    <link rel="stylesheet" href="assets/css/responsive-2.css">
    <link rel="stylesheet" href="assets/css/responsive-3.css">
+   <link rel="stylesheet" href="assets/css/restaurant-cards.css">
+
 </head>
 
 <body>
@@ -370,9 +372,8 @@
                      <div class="button-group">
                         <div class="active-bg"></div>
                         <button class="active" data-filter="*">All Properties</button>
-                        <button data-filter=".premium">Luxury</button>
-                        <button data-filter=".midrange">Mid-tier</button>
-                        <button data-filter=".budget">Standard</button>
+                        <button data-filter=".hotel">Hotels</button>
+                        <button data-filter=".restaurant">Restaurants</button>
                      </div>
                   </div>
                </div>
@@ -388,83 +389,69 @@
 
       <!-- start: Portfolio Popup -->
       <div id="portfolio-wrapper" class="popup_content_area zoom-anim-dialog mfp-hide" data-lenis-prevent="">
-         <div class="popup_modal_img">
-            <img src="assets/img/portfolio/modal-img.jpg" alt="">
-         </div>
+         <button class="modal-close-btn">
+            <i class="fa fa-times"></i>
+         </button>
          <div class="popup_modal_content">
-            <div class="portfolio_info">
-               <div class="portfolio_info_text">
-                  <h2 class="title">Property Name</h2>
-                  <div class="desc">
-                     <p>
-                        Property description will appear here.
-                     </p>
-                  </div>
-                  <a href="#" class="btn tj-btn-primary">View Property <i class="fal fa-arrow-right"></i></a>
-               </div>
-               <div class="portfolio_info_items">
-                  <div class="info_item">
-                     <div class="key">Location</div>
-                     <div class="value">Address will appear here</div>
-                  </div>
-                  <div class="info_item">
-                     <div class="key">Property Type</div>
-                     <div class="value">Property type will appear here</div>
-                  </div>
-                  <div class="info_item">
-                     <div class="key">Classification</div>
-                     <div class="value">Star rating will appear here</div>
-                  </div>
-                  <div class="info_item">
-                     <div class="key">Value Range</div>
-                     <div class="value">Price range will appear here</div>
+            <div class="modal-header">
+               <div class="modal-image">
+                  <img src="" alt="" id="modal-hotel-image">
+                  <div class="image-overlay">
+                     <div class="price-tag" id="modal-hotel-price">$200/night</div>
                   </div>
                </div>
-            </div>
-            <div class="portfolio_description">
-               <h2 class="title">Management Overview</h2>
-               <div class="desc">
-                  <p>
-                     Detailed description of management expertise for this property.
-                  </p>
+               <div class="modal-title-section">
+                  <div class="title-wrapper">
+                     <h2 class="title" id="modal-hotel-name">Hotel Name</h2>
+                     <div class="rating-stars">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <span class="rating-text">4.5/5</span>
+                  </div>
+                  </div>
+                  <div class="location-info">
+                     <i class="fa fa-map-marker-alt"></i>
+                     <span id="modal-hotel-location">Location</span>
+                  </div>
+                  <div class="property-type">
+                     <i class="fa fa-building"></i>
+                     <span id="modal-hotel-type">Type</span>
+                  </div>
                </div>
             </div>
-            <div class="portfolio_story_approach">
-               <div class="portfolio_story">
-                  <div class="story_title">
-                     <h4 class="title">Key Amenities</h4>
-                  </div>
-                  <div class="story_content" id="hotel-amenities">
+            <div class="modal-body">
+               <div class="modal-description">
+                  <h4>About the Property</h4>
+                  <p id="modal-hotel-description">Description will appear here</p>
+               </div>
+               <div class="modal-features">
+                  <div class="features-section">
+                     <h4><i class="fa fa-list-check"></i> Amenities</h4>
+                     <div id="hotel-amenities" class="features-list">
                      <!-- Amenities will be populated by JavaScript -->
                   </div>
                </div>
-               <div class="portfolio_approach">
-                  <div class="approach_title">
-                     <h4 class="title">SIGNATURE OFFERINGS</h4>
-                  </div>
-                  <div class="approach_content" id="hotel-specialties">
+                  <div class="features-section">
+                     <h4><i class="fa fa-sparkles"></i> Special Features</h4>
+                     <div id="hotel-specialties" class="features-list">
                      <!-- Specialties will be populated by JavaScript -->
                   </div>
                </div>
             </div>
-            <div class="portfolio_navigation">
-               <div class="navigation_item prev-project">
-                  <a href="#" class="project">
-                     <i class="fal fa-arrow-left"></i>
-                     <div class="nav_project">
-                        <div class="label">Previous Property</div>
-                        <h3 class="title">Previous</h3>
                      </div>
+            <div class="modal-footer">
+               <div class="action-buttons">
+                  <a href="https://qualityhotel.com" target="_blank" class="btn tj-btn-primary">
+                     <i class="fa fa-globe"></i>
+                     Visit Website
                   </a>
-               </div>
-               <div class="navigation_item next-project">
-                  <a href="#" class="project">
-                     <div class="nav_project">
-                        <div class="label">Next Property</div>
-                        <h3 class="title">Next</h3>
-                     </div>
-                     <i class="fal fa-arrow-right"></i>
-                  </a>
+                  <button class="btn tj-btn-secondary">
+                     <i class="fa fa-heart"></i>
+                     Save
+                  </button>
                </div>
             </div>
          </div>
@@ -518,13 +505,11 @@
    <!-- JS here -->
    <script src="assets/js/jquery.min.js"></script>
    <script src="assets/js/bootstrap.bundle.min.js"></script>
-
    <script src="assets/js/gsap.min.js"></script>
    <script src="assets/js/gsap-scroll-to-plugin.min.js"></script>
    <script src="assets/js/gsap-scroll-trigger.min.js"></script>
    <script src="assets/js/gsap-split-text.min.js"></script>
    <script src="assets/js/lenis.min.js"></script>
-
    <script src="assets/js/nice-select.min.js"></script>
    <script src="assets/js/backToTop.js"></script>
    <script src="assets/js/appear.min.js"></script>
@@ -569,19 +554,22 @@
            const priceClass = getPriceClass(property.priceRange);
            
            const itemHtml = `
-             <div class="portfolio-item ${priceClass}">
-               <div class="image-box">
-                 <img src="${property.image}" alt="${property.title}">
-               </div>
-               <div class="content-box">
-                 <h3 class="portfolio-title">
-                   <button data-mfp-src="#portfolio-wrapper" class="modal-popup" data-hotel-id="${property.id}">${property.title}</button>
-                 </h3>
-                 <p>${property.location.split(',')[0]}</p>
-                 <i class="fa-light fa-arrow-right"></i>
-               </div>
-             </div>
-           `;
+  <div class="portfolio-item ${priceClass} wow animate__animated animate__fadeInUp" data-wow-delay=".2s">
+    <div class="restaurant-card">
+      <div class="restaurant-img">
+        <img src="${property.image}" alt="${property.title}" />
+        <button class="heart-btn"><i class="fa fa-heart"></i></button>
+      </div>
+      <div class="restaurant-details">
+        <h5>${property.title}</h5>
+        <p>${property.location.split(',')[0]}</p>
+                   <button class="view-btn modal-popup" data-hotel-id="${property.id}">
+          View Details <i class="fa-light fa-arrow-right"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+`;
            
            portfolioBox.append(itemHtml);
          });
@@ -606,88 +594,528 @@
              $grid.isotope({ filter: filterValue });
            });
          });
+       }
+
+       // Modal Popup Implementation
+       const modal = {
+         init: function() {
+           this.cacheDOM();
+           this.bindEvents();
+           this.setupAnimations();
+         },
          
-         // Setup modal popup details
-         $(".modal-popup").on("click", function() {
-           const propertyId = $(this).data("hotel-id");
+         cacheDOM: function() {
+           this.$modal = $('#portfolio-wrapper');
+           this.$modalImage = $('#modal-hotel-image');
+           this.$modalName = $('#modal-hotel-name');
+           this.$modalDescription = $('#modal-hotel-description');
+           this.$modalLocation = $('#modal-hotel-location');
+           this.$modalType = $('#modal-hotel-type');
+           this.$modalPrice = $('#modal-hotel-price');
+           this.$amenities = $('#hotel-amenities');
+           this.$specialties = $('#hotel-specialties');
+         },
+         
+         bindEvents: function() {
+           $(document).on('click', '.modal-popup', this.openModal.bind(this));
+           $(document).on('click', '.modal-close-btn', this.closeModal.bind(this));
+         },
+         
+         setupAnimations: function() {
+           // GSAP animations for modal content
+           this.tl = gsap.timeline({ paused: true });
+           this.tl.from('.popup_modal_img', { 
+             opacity: 0, 
+             y: 20, 
+             duration: 0.5 
+           })
+           .from('.portfolio_info_text', { 
+             opacity: 0, 
+             y: 20, 
+             duration: 0.5 
+           }, '-=0.3')
+           .from('.portfolio_info_items .info_item', { 
+             opacity: 0, 
+             y: 20, 
+             duration: 0.3, 
+             stagger: 0.1 
+           }, '-=0.3')
+           .from('#hotel-amenities li', { 
+             opacity: 0, 
+             x: -20, 
+             duration: 0.3, 
+             stagger: 0.1 
+           }, '-=0.3')
+           .from('#hotel-specialties li', { 
+             opacity: 0, 
+             x: 20, 
+             duration: 0.3, 
+             stagger: 0.1 
+           }, '-=0.3');
+         },
+         
+         openModal: function(e) {
+           e.preventDefault();
+           const propertyId = $(e.currentTarget).data('hotel-id');
            const property = restaurants.find(p => p.id === propertyId);
            
            if (property) {
-             // Update popup content
-             $("#portfolio-wrapper .portfolio_info_text .title").text(property.title);
-             $("#portfolio-wrapper .portfolio_info_text .desc p").text(property.description);
-             $("#portfolio-wrapper .portfolio_info_text .btn").attr("href", property.href);
-             
-             // Update info items
-             const infoItems = $("#portfolio-wrapper .portfolio_info_items .info_item");
-             
-             // Location
-             $(infoItems[0]).find(".key").text("Location");
-             $(infoItems[0]).find(".value").text(property.location);
-             
-             // Property Type
-             $(infoItems[1]).find(".key").text("Property Type");
-             $(infoItems[1]).find(".value").text(property.cuisine);
-             
-             // Classification
-             $(infoItems[2]).find(".key").text("Classification");
-             $(infoItems[2]).find(".value").text(property.hours);
-             
-             // Value Range
-             $(infoItems[3]).find(".key").text("Value Range");
-             $(infoItems[3]).find(".value").text(property.priceRange);
-             
-             // Amenities
+             this.updateModalContent(property);
+             $.magnificPopup.open({
+               items: {
+                 src: '#portfolio-wrapper',
+                 type: 'inline'
+               },
+               callbacks: {
+                 open: () => {
+                   this.tl.play();
+                   $('body').css('overflow', 'hidden');
+                 },
+                 close: () => {
+                   this.tl.reverse();
+                   $('body').css('overflow', '');
+                 }
+               }
+             });
+           }
+         },
+         
+         closeModal: function() {
+           $.magnificPopup.close();
+         },
+         
+         updateModalContent: function(property) {
+           // Update basic information
+           this.$modalImage.attr('src', property.image).attr('alt', property.title);
+           this.$modalName.text(property.title);
+           this.$modalDescription.text(property.description);
+           this.$modalLocation.text(property.location);
+           this.$modalType.text(property.cuisine);
+           this.$modalPrice.text(property.priceRange);
+           
+           // Update rating stars
+           const rating = parseInt(property.hours) || 0;
+           $('.rating-stars i').each(function(index) {
+             if (index < rating) {
+               $(this).addClass('fas').removeClass('far');
+             } else {
+               $(this).addClass('far').removeClass('fas');
+             }
+           });
+           
+           // Update amenities
              let amenitiesHtml = '';
              if (property.amenities && property.amenities.length > 0) {
-               amenitiesHtml = '<ul>';
                property.amenities.forEach(amenity => {
-                 amenitiesHtml += `<li><i class="fa-light fa-check"></i> ${amenity}</li>`;
-               });
-               amenitiesHtml += '</ul>';
+               amenitiesHtml += `
+                 <li>
+                   <i class="fa-light fa-check"></i>
+                   <span>${amenity}</span>
+                 </li>
+               `;
+             });
              } else {
-               amenitiesHtml = '<p>No amenities listed.</p>';
+             amenitiesHtml = '<li>No amenities listed</li>';
              }
-             $("#hotel-amenities").html(amenitiesHtml);
+           this.$amenities.html(amenitiesHtml);
              
-             // Specialties
+           // Update specialties
              let specialtiesHtml = '';
              if (property.specialties && property.specialties.length > 0) {
-               specialtiesHtml = '<ul>';
                property.specialties.forEach(specialty => {
-                 specialtiesHtml += `<li><i class="fa-light fa-check"></i> ${specialty}</li>`;
-               });
-               specialtiesHtml += '</ul>';
+               specialtiesHtml += `
+                 <li>
+                   <i class="fa-light fa-check"></i>
+                   <span>${specialty}</span>
+                 </li>
+               `;
+             });
              } else {
-               specialtiesHtml = '<p>No signature offerings listed.</p>';
-             }
-             $("#hotel-specialties").html(specialtiesHtml);
-             
-             // Navigation
-             const currentIndex = restaurants.findIndex(p => p.id === property.id);
-             const prevIndex = (currentIndex - 1 + restaurants.length) % restaurants.length;
-             const nextIndex = (currentIndex + 1) % restaurants.length;
-             
-             $(".navigation_item.prev-project .title").text(restaurants[prevIndex].title);
-             $(".navigation_item.next-project .title").text(restaurants[nextIndex].title);
-             
-             $(".navigation_item.prev-project a").attr("data-hotel-id", restaurants[prevIndex].id);
-             $(".navigation_item.next-project a").attr("data-hotel-id", restaurants[nextIndex].id);
+             specialtiesHtml = '<li>No special features listed</li>';
            }
-         });
-         
-         // Navigation handling in popup
-         $(".portfolio_navigation .navigation_item a").on("click", function(e) {
-           e.preventDefault();
-           const propertyId = parseInt($(this).data("hotel-id"));
-           const property = restaurants.find(p => p.id === propertyId);
+           this.$specialties.html(specialtiesHtml);
            
-           if (property) {
-             // Find the button for this property and trigger click
-             $(`.modal-popup[data-hotel-id="${propertyId}"]`).trigger("click");
-           }
-         });
-       }
+           // Update the Visit Website button URL
+           $('.tj-btn-primary').attr('href', property.websiteUrl || '#');
+         }
+       };
+       
+       // Initialize the modal
+       modal.init();
+     });
+   </script>
+
+   <style>
+   /* Compact Modal Styles */
+   .popup_content_area {
+      max-width: 340px;
+      margin: 0 auto;
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 4px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+      overflow: hidden;
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+   }
+
+   .modal-header {
+      display: flex;
+      position: relative;
+      background: rgba(255, 255, 255, 0.9);
+   }
+
+   .modal-image {
+      width: 120px;
+      height: 120px;
+      position: relative;
+      overflow: hidden;
+      flex-shrink: 0;
+   }
+
+   .modal-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+   }
+
+   .price-tag {
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      background: rgba(0, 123, 255, 0.9);
+      color: white;
+      padding: 3px 8px;
+      font-size: 11px;
+      font-weight: 600;
+      border-radius: 3px;
+      letter-spacing: 0.5px;
+   }
+
+   .modal-title-section {
+      flex: 1;
+      padding: 12px;
+      background: transparent;
+   }
+
+   .modal-title-section .title {
+      font-size: 16px;
+      margin: 0 0 4px 0;
+      color: #333;
+      font-weight: 600;
+   }
+
+   .rating-stars {
+      color: #ffc107;
+      font-size: 11px;
+      display: flex;
+      align-items: center;
+      gap: 2px;
+      margin-bottom: 6px;
+   }
+
+   .rating-text {
+      color: #666;
+      font-size: 10px;
+      margin-left: 4px;
+   }
+
+   .location-info, .property-type {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      color: #666;
+      margin-bottom: 4px;
+      font-size: 11px;
+   }
+
+   .location-info i, .property-type i {
+      color: #007bff;
+      font-size: 10px;
+   }
+
+   .modal-body {
+      padding: 12px;
+      background: rgba(255, 255, 255, 0.8);
+   }
+
+   .modal-description {
+      margin-bottom: 12px;
+   }
+
+   .modal-description h4 {
+      font-size: 12px;
+      color: #333;
+      margin-bottom: 6px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+   }
+
+   .modal-description p {
+      font-size: 11px;
+      line-height: 1.4;
+      color: #666;
+      margin-bottom: 12px;
+   }
+
+   .modal-features {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+   }
+
+   .features-section h4 {
+      font-size: 11px;
+      margin-bottom: 6px;
+      color: #333;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+   }
+
+   .features-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+   }
+
+   .features-list li {
+      font-size: 10px;
+      color: #666;
+      padding: 3px 8px;
+      background: rgba(255, 255, 255, 0.5);
+      border: 1px solid rgba(0, 0, 0, 0.05);
+      border-radius: 3px;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      transition: all 0.2s ease;
+   }
+
+   .features-list li i {
+      color: #007bff;
+      font-size: 10px;
+   }
+
+   .features-list li:hover {
+      background: rgba(0, 123, 255, 0.1);
+      transform: translateY(-1px);
+   }
+
+   .modal-footer {
+      padding: 12px;
+      background: rgba(255, 255, 255, 0.9);
+      border-top: 1px solid rgba(0, 0, 0, 0.05);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+   }
+
+   .action-buttons {
+      display: flex;
+      gap: 6px;
+      width: 100%;
+      justify-content: center;
+   }
+
+   .btn {
+      padding: 6px 12px;
+      font-size: 11px;
+      font-weight: 500;
+      border-radius: 3px;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      transition: all 0.2s ease;
+      text-decoration: none;
+   }
+
+   .btn.tj-btn-primary {
+      background: #007bff;
+      color: white;
+      border: none;
+   }
+
+   .btn.tj-btn-primary:hover {
+      background: #0056b3;
+      transform: translateY(-1px);
+   }
+
+   .btn.tj-btn-secondary {
+      background: #f8f9fa;
+      color: #333;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+   }
+
+   .btn.tj-btn-secondary:hover {
+      background: #e9ecef;
+      transform: translateY(-1px);
+   }
+
+   .modal-close-btn {
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.9);
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 10;
+      transition: all 0.2s ease;
+   }
+
+   .modal-close-btn i {
+      font-size: 12px;
+      color: #666;
+      transition: all 0.2s ease;
+   }
+
+   .modal-close-btn:hover {
+      background: #dc3545;
+      border-color: #dc3545;
+      transform: rotate(90deg);
+   }
+
+   .modal-close-btn:hover i {
+      color: white;
+   }
+
+   /* Animation */
+   @keyframes modalFadeIn {
+      from {
+         opacity: 0;
+         transform: translateY(10px);
+      }
+      to {
+         opacity: 1;
+         transform: translateY(0);
+      }
+   }
+
+   .mfp-content .popup_content_area {
+      animation: modalFadeIn 0.3s ease forwards;
+   }
+
+   .mfp-bg {
+      background: rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(4px);
+   }
+
+   @media (max-width: 768px) {
+      .popup_content_area {
+         max-width: calc(100% - 24px);
+         margin: 12px;
+      }
+
+      .modal-image {
+         width: 100px;
+         height: 100px;
+      }
+
+      .btn {
+         padding: 5px 10px;
+         font-size: 10px;
+      }
+   }
+
+   /* Filter Button Styles */
+   .portfolio-filter {
+      margin-bottom: 40px;
+   }
+
+   .portfolio-filter .button-group {
+      display: inline-flex;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 6px;
+      border-radius: 50px;
+      position: relative;
+      gap: 8px;
+   }
+
+   .portfolio-filter button {
+      border: none;
+      background: transparent;
+      color: #666;
+      padding: 8px 24px;
+      font-size: 14px;
+      font-weight: 500;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      position: relative;
+      z-index: 1;
+   }
+
+   .portfolio-filter button.active {
+      color: #fff;
+   }
+
+   .portfolio-filter .active-bg {
+      position: absolute;
+      height: calc(100% - 12px);
+      top: 6px;
+      left: 6px;
+      background: #7000ff;
+      border-radius: 50px;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+   }
+
+   /* Update these values based on your button text lengths */
+   .portfolio-filter button[data-filter="*"].active ~ .active-bg {
+      width: 120px; /* Adjust based on "All Properties" width */
+      transform: translateX(0);
+   }
+
+   .portfolio-filter button[data-filter=".hotel"].active ~ .active-bg {
+      width: 80px; /* Adjust based on "Hotels" width */
+      transform: translateX(128px); /* Adjust based on position */
+   }
+
+   .portfolio-filter button[data-filter=".restaurant"].active ~ .active-bg {
+      width: 110px; /* Adjust based on "Restaurants" width */
+      transform: translateX(216px); /* Adjust based on position */
+   }
+
+   @media (max-width: 768px) {
+      .portfolio-filter .button-group {
+         gap: 4px;
+         padding: 4px;
+      }
+
+      .portfolio-filter button {
+         padding: 6px 16px;
+         font-size: 13px;
+      }
+   }
+   </style>
+
+   <script>
+   // Update the portfolio items class names
+   $(document).ready(function() {
+      // Update existing items to use new classes
+      $('.portfolio-item').each(function() {
+         // Remove old classes (premium, midrange, budget)
+         $(this).removeClass('premium midrange budget');
+         
+         // Add new class based on property type
+         const propertyType = $(this).data('type');
+         if (propertyType === 'hotel') {
+            $(this).addClass('hotel');
+         } else {
+            $(this).addClass('restaurant');
+         }
+      });
      });
    </script>
 
