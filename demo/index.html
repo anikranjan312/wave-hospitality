@@ -1,4 +1,7 @@
-<!DOCTYPE html><html class="no-js" lang="en"><head>
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
    <meta charset="utf-8">
    <meta http-equiv="x-ua-compatible" content="ie=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -30,6 +33,7 @@
    <link rel="stylesheet" href="assets/css/responsive.css">
    <link rel="stylesheet" href="assets/css/responsive-2.css">
    <link rel="stylesheet" href="assets/css/responsive-3.css">
+   <link rel="stylesheet" href="index.css">
 </head>
 
 <body>
@@ -68,7 +72,7 @@
             <div class="col-12 d-flex flex-wrap justify-content-between align-items-center">
                <div class="logo-box">
                   <a href="index.html">
-                     <img src="assets/img/logo/logo.png" alt="Logo" class="img-logo">
+                     <img src="assets/img/logo/wave.png" alt="Logo" class="img-logo">
                   </a>
                </div>
                <div class="header-menu" id="headerMenu">
@@ -203,7 +207,7 @@
             <div class="col-12 d-flex flex-wrap justify-content-between align-items-center">
                <div class="logo-box">
                   <a href="index.html">
-                     <img src="assets/img/logo/logo.png" alt="Logo" class="img-logo">
+                     <img src="assets/img/logo/wave.png" alt="Logo" class="img-logo">
                   </a>
                </div>
                <div class="header-menu">
@@ -341,154 +345,234 @@
             <div class="row align-items-center">
                <div class="col-md-5 d-none d-md-block">
                   <div class=" text-center">
-                     <img src="assets/img/hero/bell1.jpg" alt="Images">
+                     <img src="assets/img/logo/hero1.jpg" alt="Images">
                   </div>
                </div>
                <div class="col-md-7">
                   <div class="hero-content-box">
-                    <span class="hero-sub-title">Welcome to Wave Hospitality</span>
-                    <h1 class="hero-title">Book Hotels & Restaurants</h1>
-                
-                    <div class="hero-image-box d-md-none text-center">
-                      <img src="assets/img/hero/wave-hospitality.png" alt="Wave Hospitality">
-                    </div>
-                    <p class="lead">
-                      Discover and reserve the best hotels and dining experiences in London and beyond. Seamless booking, curated choices, unforgettable stays.
-                    </p>
-                    <div class="button-box d-flex flex-wrap align-items-center">
-                      <a href="#hotels" class="btn tj-btn-secondary">Book a Hotel</a>
-                      <a href="#restaurants" class="btn tj-btn-primary">Find Restaurants</a>
-                    </div>
+                     <span class="hero-sub-title">Welcome to Wave Hospitality</span>
+                     <h3 class="hero-title" style="font-size: 24px;">A Premier Hotel Management, Acquisition, and
+                        Development company</h3>
+                     <div class="hero-image-box d-md-none text-center">
+                        <img src="assets/img/logo/hero.jpg" alt="Wave Hospitality">
+                     </div>
+                     <p class="lead">
+                        Wave Hospitality Group
+                        Where Experience Meets Heart
+                        Family-Owned | 10+ Years of Excellence in Hotels & Restaurants
+                        Partners with Hilton, Holiday Inn, Wyndham, Best Western, Choice Hotels
+                        Restaurant Experience: Bella's, Shelly's, Perkins, Shoeless Joe's
+
+                     </p>
+                     <div class="button-box d-flex flex-wrap align-items-center">
+                        <a href="#hotels" class="btn tj-btn-secondary">Book a Hotel</a>
+                        <a href="#restaurants" class="btn tj-btn-primary">Find Restaurants</a>
+                     </div>
                   </div>
-                </div>
-                
+               </div>
+
             </div>
          </div>
       </section>
       <!-- end: Hero Area -->
 
+      <!-- Brand Logo Marquee (below hero section) -->
+      <section class="brand-marquee-section">
+         <div class="brand-marquee">
+            <div class="brand-track">
+               <img src="assets/img/logo/best.png" alt="Best" />
+               <img src="assets/img/logo/farimont.png" alt="Fairmont" />
+               <img src="assets/img/logo/hilton.png" alt="Hilton" />
+               <img src="assets/img/logo/hyatt.png" alt="Hyatt" />
+               <img src="assets/img/logo/marriot.png" alt="Marriott" />
+               <img src="assets/img/logo/sheroton.png" alt="Sheroton" />
+               <img src="assets/img/logo/wyndham.png" alt="Wyndham" />
+               <!-- Repeat for smooth loop -->
+               <img src="assets/img/logo/best.png" alt="Best " />
+               <img src="assets/img/logo/farimont.png" alt="Fairmont" />
+               <img src="assets/img/logo/hilton.png" alt="Hilton" />
+               <img src="assets/img/logo/hyatt.png" alt="Hyatt" />
+               <img src="assets/img/logo/marriot.png" alt="Marriott" />
+               <img src="assets/img/logo/sheroton.png" alt="Sheroton" />
+               <img src="assets/img/logo/wyndham.png" alt="Wyndham" />
+            </div>
+         </div>
+         <style>
+            .brand-marquee-section {
+               background:white;
+               padding: 32px 0;
+               overflow: hidden;
+            }
+
+            .brand-marquee {
+               width: 100%;
+               overflow: hidden;
+            }
+
+            .brand-track {
+               display: flex;
+               align-items: center;
+               gap: 48px;
+               animation: marquee 28s linear infinite;
+            }
+
+            .brand-track img {
+               height: 48px;
+               width: auto;
+               filter: grayscale(1) brightness(1.2);
+               opacity: 0.85;
+               transition: filter 0.2s, opacity 0.2s;
+            }
+
+            .brand-track img:hover {
+               filter: none;
+               opacity: 1;
+            }
+
+            @keyframes marquee {
+               0% {
+                  transform: translateX(0);
+               }
+
+               100% {
+                  transform: translateX(-50%);
+               }
+            }
+
+            @media (max-width: 700px) {
+               .brand-track img {
+                  height: 32px;
+               }
+
+               .brand-track {
+                  gap: 24px;
+               }
+            }
+         </style>
+      </section>
+
       <!-- start: Roll Area -->
       <section class="tj-roll-section">
          <div class="slide-roll">
-           <div class="roll-box roll-box-revers">
-             <div class="roll-item">
-               <div class="roll-icon">
-                 <img class="portal-icon" src="assets/img/icons/star.svg" alt="Icon">
+            <div class="roll-box roll-box-revers">
+               <div class="roll-item">
+                  <div class="roll-icon">
+                     <img class="portal-icon" src="assets/img/icons/star.svg" alt="Icon">
+                  </div>
+                  <div class="roll-title">
+                     <h5 class="title">24/7 Support</h5>
+                  </div>
                </div>
-               <div class="roll-title">
-                 <h5 class="title">24/7 Support</h5>
+               <div class="roll-item">
+                  <div class="roll-icon">
+                     <img class="portal-icon" src="assets/img/icons/star.svg" alt="Icon">
+                  </div>
+                  <div class="roll-title">
+                     <h5 class="title">Room Booking</h5>
+                  </div>
                </div>
-             </div>
-             <div class="roll-item">
-               <div class="roll-icon">
-                 <img class="portal-icon" src="assets/img/icons/star.svg" alt="Icon">
+               <div class="roll-item">
+                  <div class="roll-icon">
+                     <img class="portal-icon" src="assets/img/icons/star.svg" alt="Icon">
+                  </div>
+                  <div class="roll-title">
+                     <h5 class="title">Restaurant Booking</h5>
+                  </div>
                </div>
-               <div class="roll-title">
-                 <h5 class="title">Room Booking</h5>
+               <div class="roll-item">
+                  <div class="roll-icon">
+                     <img class="portal-icon" src="assets/img/icons/star.svg" alt="Icon">
+                  </div>
+                  <div class="roll-title">
+                     <h5 class="title">Events &amp; Banquets</h5>
+                  </div>
                </div>
-             </div>
-             <div class="roll-item">
-               <div class="roll-icon">
-                 <img class="portal-icon" src="assets/img/icons/star.svg" alt="Icon">
+               <div class="roll-item">
+                  <div class="roll-icon">
+                     <img class="portal-icon" src="assets/img/icons/star.svg" alt="Icon">
+                  </div>
+                  <div class="roll-title">
+                     <h5 class="title">Spa &amp; Wellness</h5>
+                  </div>
                </div>
-               <div class="roll-title">
-                 <h5 class="title">Restaurant Booking</h5>
+               <div class="roll-item">
+                  <div class="roll-icon">
+                     <img class="portal-icon" src="assets/img/icons/star.svg" alt="Icon">
+                  </div>
+                  <div class="roll-title">
+                     <h5 class="title">Concierge Service</h5>
+                  </div>
                </div>
-             </div>
-             <div class="roll-item">
-               <div class="roll-icon">
-                 <img class="portal-icon" src="assets/img/icons/star.svg" alt="Icon">
+               <div class="roll-item">
+                  <div class="roll-icon">
+                     <img class="portal-icon" src="assets/img/icons/star.svg" alt="Icon">
+                  </div>
+                  <div class="roll-title">
+                     <h5 class="title">Airport Shuttle</h5>
+                  </div>
                </div>
-               <div class="roll-title">
-                 <h5 class="title">Events &amp; Banquets</h5>
+            </div>
+            <div class="roll-box roll-box-revers">
+               <div class="roll-item">
+                  <div class="roll-icon">
+                     <img class="portal-icon" src="assets/img/icons/star.svg" alt="Icon">
+                  </div>
+                  <div class="roll-title">
+                     <h5 class="title">24/7 Support</h5>
+                  </div>
                </div>
-             </div>
-             <div class="roll-item">
-               <div class="roll-icon">
-                 <img class="portal-icon" src="assets/img/icons/star.svg" alt="Icon">
+               <div class="roll-item">
+                  <div class="roll-icon">
+                     <img class="portal-icon" src="assets/img/icons/star.svg" alt="Icon">
+                  </div>
+                  <div class="roll-title">
+                     <h5 class="title">Room Booking</h5>
+                  </div>
                </div>
-               <div class="roll-title">
-                 <h5 class="title">Spa &amp; Wellness</h5>
+               <div class="roll-item">
+                  <div class="roll-icon">
+                     <img class="portal-icon" src="assets/img/icons/star.svg" alt="Icon">
+                  </div>
+                  <div class="roll-title">
+                     <h5 class="title">Restaurant Booking</h5>
+                  </div>
                </div>
-             </div>
-             <div class="roll-item">
-               <div class="roll-icon">
-                 <img class="portal-icon" src="assets/img/icons/star.svg" alt="Icon">
+               <div class="roll-item">
+                  <div class="roll-icon">
+                     <img class="portal-icon" src="assets/img/icons/star.svg" alt="Icon">
+                  </div>
+                  <div class="roll-title">
+                     <h5 class="title">Events &amp; Banquets</h5>
+                  </div>
                </div>
-               <div class="roll-title">
-                 <h5 class="title">Concierge Service</h5>
+               <div class="roll-item">
+                  <div class="roll-icon">
+                     <img class="portal-icon" src="assets/img/icons/star.svg" alt="Icon">
+                  </div>
+                  <div class="roll-title">
+                     <h5 class="title">Spa &amp; Wellness</h5>
+                  </div>
                </div>
-             </div>
-             <div class="roll-item">
-               <div class="roll-icon">
-                 <img class="portal-icon" src="assets/img/icons/star.svg" alt="Icon">
+               <div class="roll-item">
+                  <div class="roll-icon">
+                     <img class="portal-icon" src="assets/img/icons/star.svg" alt="Icon">
+                  </div>
+                  <div class="roll-title">
+                     <h5 class="title">Concierge Service</h5>
+                  </div>
                </div>
-               <div class="roll-title">
-                 <h5 class="title">Airport Shuttle</h5>
+               <div class="roll-item">
+                  <div class="roll-icon">
+                     <img class="portal-icon" src="assets/img/icons/star.svg" alt="Icon">
+                  </div>
+                  <div class="roll-title">
+                     <h5 class="title">Airport Shuttle</h5>
+                  </div>
                </div>
-             </div>
-           </div>
-           <div class="roll-box roll-box-revers">
-             <div class="roll-item">
-               <div class="roll-icon">
-                 <img class="portal-icon" src="assets/img/icons/star.svg" alt="Icon">
-               </div>
-               <div class="roll-title">
-                 <h5 class="title">24/7 Support</h5>
-               </div>
-             </div>
-             <div class="roll-item">
-               <div class="roll-icon">
-                 <img class="portal-icon" src="assets/img/icons/star.svg" alt="Icon">
-               </div>
-               <div class="roll-title">
-                 <h5 class="title">Room Booking</h5>
-               </div>
-             </div>
-             <div class="roll-item">
-               <div class="roll-icon">
-                 <img class="portal-icon" src="assets/img/icons/star.svg" alt="Icon">
-               </div>
-               <div class="roll-title">
-                 <h5 class="title">Restaurant Booking</h5>
-               </div>
-             </div>
-             <div class="roll-item">
-               <div class="roll-icon">
-                 <img class="portal-icon" src="assets/img/icons/star.svg" alt="Icon">
-               </div>
-               <div class="roll-title">
-                 <h5 class="title">Events &amp; Banquets</h5>
-               </div>
-             </div>
-             <div class="roll-item">
-               <div class="roll-icon">
-                 <img class="portal-icon" src="assets/img/icons/star.svg" alt="Icon">
-               </div>
-               <div class="roll-title">
-                 <h5 class="title">Spa &amp; Wellness</h5>
-               </div>
-             </div>
-             <div class="roll-item">
-               <div class="roll-icon">
-                 <img class="portal-icon" src="assets/img/icons/star.svg" alt="Icon">
-               </div>
-               <div class="roll-title">
-                 <h5 class="title">Concierge Service</h5>
-               </div>
-             </div>
-             <div class="roll-item">
-               <div class="roll-icon">
-                 <img class="portal-icon" src="assets/img/icons/star.svg" alt="Icon">
-               </div>
-               <div class="roll-title">
-                 <h5 class="title">Airport Shuttle</h5>
-               </div>
-             </div>
-           </div>
+            </div>
          </div>
-       </section>
-       
+      </section>
+
       <!-- end: Roll Area -->
 
       <!-- start: Project Area -->
@@ -637,99 +721,195 @@
       <!-- start: Service Area -->
       <section class="service-section">
          <div class="container">
-           <div class="row">
-             <div class="col-md-12">
-               <div class="section-header text-center">
-                 <h2 class="section-title wow fadeInUp" data-wow-delay=".3s">Our Services</h2>
-                 <p class="wow fadeInUp text-uppercase" data-wow-delay=".4s">What We Offer at Wave Hospitality</p>
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="section-header text-center">
+                     <h2 class="section-title wow fadeInUp" data-wow-delay=".3s">Hotel Services</h2>
+                     <p class="wow fadeInUp text-uppercase" data-wow-delay=".4s">What We Offer at Wave Hospitality</p>
+                  </div>
                </div>
-             </div>
-           </div>
-           <div class="row">
-             <!-- Hotel Room Reservations -->
-             <div class="col-lg-6">
-               <div class="service-item wow fadeInLeft" data-wow-delay=".3s">
-                 <div class="service-icon">
-                   <img src="assets/img/icons/service-1.svg" alt="Room Reservations">
-                 </div>
-                 <div class="service-content">
-                   <h5 class="title">
-                     <button data-mfp-src="#service-wrapper" class="modal-popup">
-                       Room Reservations
-                     </button>
-                   </h5>
-                   <div class="desc">
-                     <p>
-                       Book cozy and elegant rooms tailored to your needs—from deluxe suites to family rooms—ensuring comfort and tranquility throughout your stay.
-                     </p>
-                   </div>
-                 </div>
+            </div>
+            <div class="row">
+               <!-- Hotel Room Reservations -->
+               <div class="col-lg-6">
+                  <div class="service-item wow fadeInLeft" data-wow-delay=".3s">
+                     <div class="service-icon">
+                        <img src="assets/img/icons/service-1.svg" alt="Room Reservations">
+                     </div>
+                     <div class="service-content">
+                        <h5 class="title">
+                           <button data-mfp-src="#service-wrapper" class="modal-popup">
+                              Full-Service Management
+
+                           </button>
+                        </h5>
+                        <div class="desc">
+                           <p>
+                              We provide end-to-end operational management for hotels, overseeing daily operations, staffing, accounting, sales, and guest satisfaction. This includes everything from housekeeping to food and beverage, maintenance, and administrative support—ensuring seamless, profitable performance.
+                           </p>
+                        </div>
+                     </div>
+                  </div>
                </div>
-             </div>
-             <!-- Restaurant & Dining -->
-             <div class="col-lg-6">
-               <div class="service-item wow fadeInRight" data-wow-delay=".3s">
-                 <div class="service-icon">
-                   <img src="assets/img/icons/service-2.svg" alt="Restaurant & Dining">
-                 </div>
-                 <div class="service-content">
-                   <h5 class="title">
-                     <button data-mfp-src="#service-wrapper" class="modal-popup">
-                       Restaurant & Dining
-                     </button>
-                   </h5>
-                   <div class="desc">
-                     <p>
-                       Reserve tables at our signature restaurants offering gourmet cuisine, local specialties, and bespoke dining experiences for every palate.
-                     </p>
-                   </div>
-                 </div>
+               <!-- Restaurant & Dining -->
+               <div class="col-lg-6">
+                  <div class="service-item wow fadeInRight" data-wow-delay=".3s">
+                     <div class="service-icon">
+                        <img src="assets/img/icons/service-2.svg" alt="Restaurant & Dining">
+                     </div>
+                     <div class="service-content">
+                        <h5 class="title">
+                           <button data-mfp-src="#service-wrapper" class="modal-popup">
+                              Franchise & Brand Compliance
+                           </button>
+                        </h5>
+                        <div class="desc">
+                           <p>
+                              We ensure your property adheres to all franchise standards and brand guidelines, including SOPs, quality audits, guest service metrics, and visual identity requirements—avoiding penalties and maintaining brand integrity.
+                           </p>
+                        </div>
+                     </div>
+                  </div>
                </div>
-             </div>
-             <!-- Event & Banquet Planning -->
-             <div class="col-lg-6">
-               <div class="service-item wow fadeInLeft" data-wow-delay=".4s">
-                 <div class="service-icon">
-                   <img src="assets/img/icons/service-3.svg" alt="Event & Banquet Planning">
-                 </div>
-                 <div class="service-content">
-                   <h5 class="title">
-                     <button data-mfp-src="#service-wrapper" class="modal-popup">
-                       Event & Banquet Planning
-                     </button>
-                   </h5>
-                   <div class="desc">
-                     <p>
-                       Host weddings, corporate galas, and private gatherings in our elegant banquet halls—fully customized décor, catering, and audiovisual support included.
-                     </p>
-                   </div>
-                 </div>
+               <!-- Event & Banquet Planning -->
+               <div class="col-lg-6">
+                  <div class="service-item wow fadeInLeft" data-wow-delay=".4s">
+                     <div class="service-icon">
+                        <img src="assets/img/icons/service-3.svg" alt="Event & Banquet Planning">
+                     </div>
+                     <div class="service-content">
+                        <h5 class="title">
+                           <button data-mfp-src="#service-wrapper" class="modal-popup">
+                              Revenue Optimization
+                           </button>
+                        </h5>
+                        <div class="desc">
+                           <p>
+                              Our expert team uses dynamic pricing, demand forecasting, channel management, and advanced revenue management systems to maximize your hotel's profitability across all distribution platforms, including OTAs and direct bookings.
+                           </p>
+                        </div>
+                     </div>
+                  </div>
                </div>
-             </div>
-             <!-- Corporate & Group Bookings -->
-             <div class="col-lg-6">
-               <div class="service-item wow fadeInRight" data-wow-delay=".4s">
-                 <div class="service-icon">
-                   <img src="assets/img/icons/service-4.svg" alt="Corporate & Group Bookings">
-                 </div>
-                 <div class="service-content">
-                   <h5 class="title">
-                     <button data-mfp-src="#service-wrapper" class="modal-popup">
-                       Corporate & Group Bookings
-                     </button>
-                   </h5>
-                   <div class="desc">
-                     <p>
-                       Seamlessly manage bulk room and meal bookings for business retreats, tours, and conferences with attractive group rates and dedicated account support.
-                     </p>
-                   </div>
-                 </div>
+               <!-- Corporate & Group Bookings -->
+               <div class="col-lg-6">
+                  <div class="service-item wow fadeInRight" data-wow-delay=".4s">
+                     <div class="service-icon">
+                        <img src="assets/img/icons/service-4.svg" alt="Corporate & Group Bookings">
+                     </div>
+                     <div class="service-content">
+                        <h5 class="title">
+                           <button data-mfp-src="#service-wrapper" class="modal-popup">
+                              Staff Training & Development
+                           </button>
+                        </h5>
+                        <div class="desc">
+                           <p>
+                              We train hotel teams on service excellence, operational efficiency, brand expectations, and leadership development. Our custom programs ensure staff are skilled, motivated, and aligned with hospitality best practices.
+                           </p>
+                        </div>
+                     </div>
+                  </div>
                </div>
-             </div>
-           </div>
+            </div>
          </div>
-       </section>
-       
+      </section>
+      <section class="service-section">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="section-header text-center">
+                     <h2 class="section-title wow fadeInUp" data-wow-delay=".3s">Restaurant Services
+                     </h2>
+                     <p class="wow fadeInUp text-uppercase" data-wow-delay=".4s">What We Offer at Wave Hospitality</p>
+                  </div>
+               </div>
+            </div>
+            <div class="row">
+               <!-- Hotel Room Reservations -->
+               <div class="col-lg-6">
+                  <div class="service-item wow fadeInLeft" data-wow-delay=".3s">
+                     <div class="service-icon">
+                        <img src="assets/img/icons/service-1.svg" alt="Room Reservations">
+                     </div>
+                     <div class="service-content">
+                        <h5 class="title">
+                           <button data-mfp-src="#service-wrapper" class="modal-popup">
+                              Restaurant Management
+                           </button>
+                        </h5>
+                        <div class="desc">
+                           <p>
+                              We oversee all aspects of daily restaurant operations—staffing, kitchen workflows, inventory, guest service, and cost control. Our management ensures consistent food quality, hygiene standards, and customer satisfaction.
+                           </p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <!-- Restaurant & Dining -->
+               <div class="col-lg-6">
+                  <div class="service-item wow fadeInRight" data-wow-delay=".3s">
+                     <div class="service-icon">
+                        <img src="assets/img/icons/service-2.svg" alt="Restaurant & Dining">
+                     </div>
+                     <div class="service-content">
+                        <h5 class="title">
+                           <button data-mfp-src="#service-wrapper" class="modal-popup">
+                              Franchise Operations
+                           </button>
+                        </h5>
+                        <div class="desc">
+                           <p>
+                              As experienced franchise partners, we run restaurants following brand protocols while meeting local market needs. We manage franchise relations, ensure compliance, and deliver performance aligned with brand expectations.
+                           </p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <!-- Event & Banquet Planning -->
+               <div class="col-lg-6">
+                  <div class="service-item wow fadeInLeft" data-wow-delay=".4s">
+                     <div class="service-icon">
+                        <img src="assets/img/icons/service-3.svg" alt="Event & Banquet Planning">
+                     </div>
+                     <div class="service-content">
+                        <h5 class="title">
+                           <button data-mfp-src="#service-wrapper" class="modal-popup">
+                              Tenant Leasing & Oversight
+                           </button>
+                        </h5>
+                        <div class="desc">
+                           <p>
+                              We manage F&B spaces within hotels or malls, handling tenant sourcing, lease agreements, and performance oversight. Our team ensures that restaurant tenants align with property goals and uphold quality standards.
+                           </p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <!-- Corporate & Group Bookings -->
+               <div class="col-lg-6">
+                  <div class="service-item wow fadeInRight" data-wow-delay=".4s">
+                     <div class="service-icon">
+                        <img src="assets/img/icons/service-4.svg" alt="Corporate & Group Bookings">
+                     </div>
+                     <div class="service-content">
+                        <h5 class="title">
+                           <button data-mfp-src="#service-wrapper" class="modal-popup">
+                              Guest Experience Enhancement
+                           </button>
+                        </h5>
+                        <div class="desc">
+                           <p>
+                              Through staff training, ambiance optimization, menu curation, and service design, we create memorable dining experiences that foster repeat visits, higher reviews, and stronger brand loyalty.
+                           </p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+
       <!-- end: Service Area -->
 
       <!-- start: Service Popup -->
@@ -839,7 +1019,8 @@
                                  <input type="email" name="semail" id="semail" placeholder="Email" autocomplete="off">
                               </div>
                               <div class="form_group">
-                                 <textarea name="smessage" id="smessage" placeholder="Your message" autocomplete="off"></textarea>
+                                 <textarea name="smessage" id="smessage" placeholder="Your message"
+                                    autocomplete="off"></textarea>
                               </div>
                               <div class="form_btn">
                                  <button class="btn tj-btn-primary" type="submit">Send Message</button>
@@ -862,25 +1043,33 @@
                   <div class="funfact-area">
                      <div class="row">
                         <div class="col-6 col-lg-3">
-                           <div class="funfact-item d-flex flex-column flex-sm-row flex-wrap align-items-center wow fadeInUp" data-wow-delay=".3s">
+                           <div
+                              class="funfact-item d-flex flex-column flex-sm-row flex-wrap align-items-center wow fadeInUp"
+                              data-wow-delay=".3s">
                               <div class="number"><span class="odometer" data-count="14">0</span></div>
                               <div class="text">Years of <br>Experience</div>
                            </div>
                         </div>
                         <div class="col-6 col-lg-3">
-                           <div class="funfact-item d-flex flex-column flex-sm-row flex-wrap align-items-center wow fadeInUp" data-wow-delay=".4s">
+                           <div
+                              class="funfact-item d-flex flex-column flex-sm-row flex-wrap align-items-center wow fadeInUp"
+                              data-wow-delay=".4s">
                               <div class="number"><span class="odometer" data-count="50">0</span>+</div>
                               <div class="text">Project <br>Completed</div>
                            </div>
                         </div>
                         <div class="col-6 col-lg-3">
-                           <div class="funfact-item d-flex flex-column flex-sm-row flex-wrap align-items-center wow fadeInUp" data-wow-delay=".5s">
+                           <div
+                              class="funfact-item d-flex flex-column flex-sm-row flex-wrap align-items-center wow fadeInUp"
+                              data-wow-delay=".5s">
                               <div class="number"><span class="odometer" data-count="1.5">0</span>K</div>
                               <div class="text">Happy <br>Clients</div>
                            </div>
                         </div>
                         <div class="col-6 col-lg-3">
-                           <div class="funfact-item d-flex flex-column flex-sm-row flex-wrap align-items-center wow fadeInUp" data-wow-delay=".6s">
+                           <div
+                              class="funfact-item d-flex flex-column flex-sm-row flex-wrap align-items-center wow fadeInUp"
+                              data-wow-delay=".6s">
                               <div class="number"><span class="odometer" data-count="14">0</span></div>
                               <div class="text">Years of <br>Experience</div>
                            </div>
@@ -894,186 +1083,184 @@
       <!-- end: Counter Area -->
 
       <!-- start: Works Area -->
-      <section class="works-section style-2">
+      <section class="works-section style-2 enhanced-about-section" id="about">
          <div class="container">
-           <div class="row">
-             <div class="col-md-12">
-               <div class="section-header text-center">
-                 <h2 class="section-title wow fadeInUp" data-wow-delay=".3s">About Us</h2>
+            <div class="row justify-content-center">
+               <div class="col-md-10">
+                  <div class="about-card glass-card text-center wow fadeInUp" data-wow-delay=".2s">
+                     <div class="about-accent mb-3">
+                        <svg width="60" height="8" viewBox="0 0 60 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                           <ellipse cx="30" cy="4" rx="30" ry="4" fill="url(#about-accent-gradient)" />
+                           <defs>
+                              <linearGradient id="about-accent-gradient" x1="0" y1="4" x2="60" y2="4"
+                                 gradientUnits="userSpaceOnUse">
+                                 <stop stop-color="#a084ff" />
+                                 <stop offset="1" stop-color="#7000ff" />
+                              </linearGradient>
+                           </defs>
+                        </svg>
+                     </div>
+                     <h2 class="section-title about-title gradient-text mb-4">About Us</h2>
+                     <h6 class="about-desc mb-0">
+                        Wave Hospitality Group is a family-owned and operated company with over a decade of experience
+                        in managing hotels and restaurants. Our diverse portfolio spans top hotel brands and a growing
+                        number of successful food & beverage ventures. We combine operational expertise with a personal
+                        touch, ensuring every property—hospitality or restaurant—delivers quality, comfort, and
+                        consistency.
+                     </h6>
+                  </div>
                </div>
-             </div>
-           </div>
-           <div class="row">
-             <div class="col-12">
-               <div class="works-wrapper">
-                 <!-- Our Story -->
-                 <div class="works-content-item">
-                   <h3 class="title wow fadeInLeft" data-wow-delay=".3s">Our Story</h3>
-                   <div class="works-inner wow fadeInUp" data-wow-delay=".4s">
-                     <div class="works-item">
-                       <div class="works-icon">
-                         <i class="flaticon-clock"></i>
-                       </div>
-                       <div class="works-content">
-                         <span class="number">2018</span>
-                         <h5 class="title">Founded in London</h5>
-                         <span class="sub-title">Wave Hospitality was born to redefine travel comfort.</span>
-                       </div>
-                     </div>
-                     <div class="works-item">
-                       <div class="works-icon">
-                         <i class="flaticon-thumb-up"></i>
-                       </div>
-                       <div class="works-content">
-                         <span class="number">2020</span>
-                         <h5 class="title">First Restaurant Launch</h5>
-                         <span class="sub-title">Opened our flagship waterfront dining venue.</span>
-                       </div>
-                     </div>
-                     <div class="works-item">
-                       <div class="works-icon">
-                         <i class="flaticon-worldwide"></i>
-                       </div>
-                       <div class="works-content">
-                         <span class="number">2023</span>
-                         <h5 class="title">Expanded Globally</h5>
-                         <span class="sub-title">Now serving guests across three continents.</span>
-                       </div>
-                     </div>
-                   </div>
-                 </div>
-                 <!-- Our Mission & Values -->
-                 <div class="works-content-item">
-                   <h3 class="title wow fadeInRight" data-wow-delay=".3s">Our Mission & Values</h3>
-                   <div class="works-inner wow fadeInUp" data-wow-delay=".4s">
-                     <div class="works-item">
-                       <div class="works-icon">
-                         <i class="flaticon-target"></i>
-                       </div>
-                       <div class="works-content">
-                         <span class="number">Mission</span>
-                         <h5 class="title">Deliver Unforgettable Stays</h5>
-                         <span class="sub-title">We aim to blend luxury with authenticity in every experience.</span>
-                       </div>
-                     </div>
-                     <div class="works-item">
-                       <div class="works-icon">
-                         <i class="flaticon-heart"></i>
-                       </div>
-                       <div class="works-content">
-                         <span class="number">Value</span>
-                         <h5 class="title">Guest-Centric Service</h5>
-                         <span class="sub-title">Your comfort and satisfaction drive everything we do.</span>
-                       </div>
-                     </div>
-                     <div class="works-item">
-                       <div class="works-icon">
-                         <i class="flaticon-leaf"></i>
-                       </div>
-                       <div class="works-content">
-                         <span class="number">Value</span>
-                         <h5 class="title">Sustainability</h5>
-                         <span class="sub-title">Committed to eco-friendly practices across all properties.</span>
-                       </div>
-                     </div>
-                   </div>
-                 </div>
-                 <!-- End of About Us -->
-               </div>
-             </div>
-           </div>
+            </div>
          </div>
-       </section>
-       
+         <style>
+            .enhanced-about-section {
+               position: relative;
+               background: radial-gradient(ellipse at 50% 0%, #2a1046 0%, #14001c 100%);
+               padding: 80px 0 40px 0;
+            }
+
+            .about-card.glass-card {
+               background: rgba(255, 255, 255, 0.08);
+               border-radius: 24px;
+               box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
+               backdrop-filter: blur(8px);
+               -webkit-backdrop-filter: blur(8px);
+               border: 1px solid rgba(255, 255, 255, 0.18);
+               padding: 48px 32px 36px 32px;
+               margin-bottom: 32px;
+            }
+
+            .about-accent {
+               display: flex;
+               justify-content: center;
+               align-items: center;
+            }
+
+            .about-title.gradient-text {
+               font-size: 2.8rem;
+               font-weight: 800;
+               background: linear-gradient(90deg, #a084ff 0%, #7000ff 100%);
+               -webkit-background-clip: text;
+               -webkit-text-fill-color: transparent;
+               background-clip: text;
+               text-fill-color: transparent;
+               margin-bottom: 18px;
+            }
+
+            .about-desc {
+               color: #fff;
+               font-size: 1.18rem;
+               font-weight: 500;
+               line-height: 1.7;
+               letter-spacing: 0.01em;
+               text-shadow: 0 2px 8px rgba(112, 0, 255, 0.08);
+            }
+
+            @media (max-width: 768px) {
+               .about-card.glass-card {
+                  padding: 28px 10px 20px 10px;
+               }
+
+               .about-title.gradient-text {
+                  font-size: 2rem;
+               }
+
+               .about-desc {
+                  font-size: 1rem;
+               }
+            }
+         </style>
+      </section>
+
       <!-- end: Works Area -->
 
       <!-- start: Skills Area -->
       <section class="skills-section style-3">
          <div class="container">
-           <div class="row">
-             <div class="col-md-12">
-               <div class="section-header text-center">
-                 <h2 class="section-title wow fadeInUp" data-wow-delay=".3s">What We Do</h2>
-                 <p class="text-uppercase wow fadeInUp" data-wow-delay=".4s">
-                   How We Serve You
-                 </p>
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="section-header text-center">
+                     <h2 class="section-title wow fadeInUp" data-wow-delay=".3s">What We Do</h2>
+                     <p class="text-uppercase wow fadeInUp" data-wow-delay=".4s">
+                        How We Serve You
+                     </p>
+                  </div>
                </div>
-             </div>
-           </div>
-           <div class="row">
-             <div class="col-md-12">
-               <div class="skills-widget d-flex flex-wrap justify-content-center align-items-center">
-                 <!-- 24/7 Customer Support -->
-                 <div class="skill-item wow fadeInUp" data-wow-delay=".3s">
-                   <div class="skill-inner">
-                     <div class="icon-box">
-                       <img src="assets/img/icons/support.svg" alt="24/7 Support">
+            </div>
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="skills-widget d-flex flex-wrap justify-content-center align-items-center">
+                     <!-- 24/7 Customer Support -->
+                     <div class="skill-item wow fadeInUp" data-wow-delay=".3s">
+                        <div class="skill-inner">
+                           <div class="icon-box">
+                              <img src="assets/img/logo/Group 2.png" alt="24/7 Support">
+                           </div>
+                           <div class="number">24/7</div>
+                        </div>
+                        <p>Customer Support</p>
                      </div>
-                     <div class="number">24/7</div>
-                   </div>
-                   <p>Customer Support</p>
-                 </div>
-       
-                 <!-- Luxury Accommodations -->
-                 <div class="skill-item wow fadeInUp" data-wow-delay=".4s">
-                   <div class="skill-inner">
-                     <div class="icon-box">
-                       <img src="assets/img/icons/suite.svg" alt="Luxury Suites">
+
+                     <!-- Luxury Accommodations -->
+                     <div class="skill-item wow fadeInUp" data-wow-delay=".4s">
+                        <div class="skill-inner">
+                           <div class="icon-box">
+                              <img src="assets/img/logo/Group 3.png" alt="Luxury Suites">
+                           </div>
+                           <div class="number">150+</div>
+                        </div>
+                        <p>Luxury Suites</p>
                      </div>
-                     <div class="number">150+</div>
-                   </div>
-                   <p>Luxury Suites</p>
-                 </div>
-       
-                 <!-- Gourmet Dining -->
-                 <div class="skill-item wow fadeInUp" data-wow-delay=".5s">
-                   <div class="skill-inner">
-                     <div class="icon-box">
-                       <img src="assets/img/icons/dining.svg" alt="Gourmet Dining">
+
+                     <!-- Gourmet Dining -->
+                     <div class="skill-item wow fadeInUp" data-wow-delay=".5s">
+                        <div class="skill-inner">
+                           <div class="icon-box">
+                              <img src="assets/img/logo/goirment.jpg" alt="Gourmet Dining">
+                           </div>
+                           <div class="number">50+</div>
+                        </div>
+                        <p>Gourmet Dining</p>
                      </div>
-                     <div class="number">50+</div>
-                   </div>
-                   <p>Gourmet Dining</p>
-                 </div>
-       
-                 <!-- Events & Banquets -->
-                 <div class="skill-item wow fadeInUp" data-wow-delay=".6s">
-                   <div class="skill-inner">
-                     <div class="icon-box">
-                       <img src="assets/img/icons/event.svg" alt="Events & Banquets">
+
+                     <!-- Events & Banquets -->
+                     <div class="skill-item wow fadeInUp" data-wow-delay=".6s">
+                        <div class="skill-inner">
+                           <div class="icon-box">
+                              <img src="assets/img/logo/hero.jpg" alt="Events & Banquets">
+                           </div>
+                           <div class="number">200+</div>
+                        </div>
+                        <p>Events & Banquets</p>
                      </div>
-                     <div class="number">200+</div>
-                   </div>
-                   <p>Events & Banquets</p>
-                 </div>
-       
-                 <!-- Spa & Wellness -->
-                 <div class="skill-item wow fadeInUp" data-wow-delay=".7s">
-                   <div class="skill-inner">
-                     <div class="icon-box">
-                       <img src="assets/img/icons/spa.svg" alt="Spa & Wellness">
+
+                     <!-- Spa & Wellness -->
+                     <div class="skill-item wow fadeInUp" data-wow-delay=".7s">
+                        <div class="skill-inner">
+                           <div class="icon-box">
+                              <img src="assets/img/logo/Group 4.png" alt="Spa & Wellness">
+                           </div>
+                           <div class="number">5★</div>
+                        </div>
+                        <p>Spa & Wellness</p>
                      </div>
-                     <div class="number">5★</div>
-                   </div>
-                   <p>Spa & Wellness</p>
-                 </div>
-       
-                 <!-- Concierge Services -->
-                 <div class="skill-item wow fadeInUp" data-wow-delay=".8s">
-                   <div class="skill-inner">
-                     <div class="icon-box">
-                       <img src="assets/img/icons/concierge.svg" alt="Concierge Services">
+
+                     <!-- Concierge Services -->
+                     <div class="skill-item wow fadeInUp" data-wow-delay=".8s">
+                        <div class="skill-inner">
+                           <div class="icon-box">
+                              <img src="assets/img/logo/Group 1.png" alt="Concierge Services">
+                           </div>
+                           <div class="number">Elite</div>
+                        </div>
+                        <p>Concierge Services</p>
                      </div>
-                     <div class="number">Elite</div>
-                   </div>
-                   <p>Concierge Services</p>
-                 </div>
+                  </div>
                </div>
-             </div>
-           </div>
+            </div>
          </div>
-       </section>
-       
+      </section>
+
       <!-- end: Skills Area -->
 
       <!-- start: Testimonial Area -->
@@ -1088,19 +1275,27 @@
                               <img src="assets/img/testimonials/logo/1.png" alt="">
                            </div>
                            <div class="icon-box">
-                              <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                 <path d="M0.105431 2.18998C0.0301532 0.988687 1.02531 -0.00647222 2.2266 0.0688056L19.4961 1.15097C21.2148 1.25867 22.0029 3.34358 20.7852 4.56127L4.5979 20.7486C3.3802 21.9663 1.2953 21.1781 1.1876 19.4594L0.105431 2.18998Z" fill="url(#paint0_linear_263_588)"></path>
+                              <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                 <path
+                                    d="M0.105431 2.18998C0.0301532 0.988687 1.02531 -0.00647222 2.2266 0.0688056L19.4961 1.15097C21.2148 1.25867 22.0029 3.34358 20.7852 4.56127L4.5979 20.7486C3.3802 21.9663 1.2953 21.1781 1.1876 19.4594L0.105431 2.18998Z"
+                                    fill="url(#paint0_linear_263_588)"></path>
                                  <defs>
-                                    <linearGradient id="paint0_linear_263_588" x1="-0.0363755" y1="-0.0729998" x2="35.3333" y2="-0.0729991" gradientUnits="userSpaceOnUse">
+                                    <linearGradient id="paint0_linear_263_588" x1="-0.0363755" y1="-0.0729998"
+                                       x2="35.3333" y2="-0.0729991" gradientUnits="userSpaceOnUse">
                                        <stop offset="1" stop-color="var(--tj-theme-primary)"></stop>
                                        <stop offset="1" stop-color="#140C1C" stop-opacity="0"></stop>
                                     </linearGradient>
                                  </defs>
                               </svg>
-                              <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                 <path d="M0.105431 2.18998C0.0301532 0.988687 1.02531 -0.00647222 2.2266 0.0688056L19.4961 1.15097C21.2148 1.25867 22.0029 3.34358 20.7852 4.56127L4.5979 20.7486C3.3802 21.9663 1.2953 21.1781 1.1876 19.4594L0.105431 2.18998Z" fill="url(#paint1_linear_263_589)"></path>
+                              <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                 <path
+                                    d="M0.105431 2.18998C0.0301532 0.988687 1.02531 -0.00647222 2.2266 0.0688056L19.4961 1.15097C21.2148 1.25867 22.0029 3.34358 20.7852 4.56127L4.5979 20.7486C3.3802 21.9663 1.2953 21.1781 1.1876 19.4594L0.105431 2.18998Z"
+                                    fill="url(#paint1_linear_263_589)"></path>
                                  <defs>
-                                    <linearGradient id="paint1_linear_263_589" x1="-0.0363755" y1="-0.0729998" x2="35.3333" y2="-0.0729991" gradientUnits="userSpaceOnUse">
+                                    <linearGradient id="paint1_linear_263_589" x1="-0.0363755" y1="-0.0729998"
+                                       x2="35.3333" y2="-0.0729991" gradientUnits="userSpaceOnUse">
                                        <stop offset="1" stop-color="var(--tj-theme-primary)"></stop>
                                        <stop offset="1" stop-color="#140C1C" stop-opacity="0"></stop>
                                     </linearGradient>
@@ -1125,19 +1320,27 @@
                               <img src="assets/img/testimonials/logo/1.png" alt="">
                            </div>
                            <div class="icon-box">
-                              <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                 <path d="M0.105431 2.18998C0.0301532 0.988687 1.02531 -0.00647222 2.2266 0.0688056L19.4961 1.15097C21.2148 1.25867 22.0029 3.34358 20.7852 4.56127L4.5979 20.7486C3.3802 21.9663 1.2953 21.1781 1.1876 19.4594L0.105431 2.18998Z" fill="url(#paint2_linear_263_511)"></path>
+                              <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                 <path
+                                    d="M0.105431 2.18998C0.0301532 0.988687 1.02531 -0.00647222 2.2266 0.0688056L19.4961 1.15097C21.2148 1.25867 22.0029 3.34358 20.7852 4.56127L4.5979 20.7486C3.3802 21.9663 1.2953 21.1781 1.1876 19.4594L0.105431 2.18998Z"
+                                    fill="url(#paint2_linear_263_511)"></path>
                                  <defs>
-                                    <linearGradient id="paint2_linear_263_511" x1="-0.0363755" y1="-0.0729998" x2="35.3333" y2="-0.0729991" gradientUnits="userSpaceOnUse">
+                                    <linearGradient id="paint2_linear_263_511" x1="-0.0363755" y1="-0.0729998"
+                                       x2="35.3333" y2="-0.0729991" gradientUnits="userSpaceOnUse">
                                        <stop offset="1" stop-color="var(--tj-theme-primary)"></stop>
                                        <stop offset="1" stop-color="#140C1C" stop-opacity="0"></stop>
                                     </linearGradient>
                                  </defs>
                               </svg>
-                              <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                 <path d="M0.105431 2.18998C0.0301532 0.988687 1.02531 -0.00647222 2.2266 0.0688056L19.4961 1.15097C21.2148 1.25867 22.0029 3.34358 20.7852 4.56127L4.5979 20.7486C3.3802 21.9663 1.2953 21.1781 1.1876 19.4594L0.105431 2.18998Z" fill="url(#paint3_linear_263_510)"></path>
+                              <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                 <path
+                                    d="M0.105431 2.18998C0.0301532 0.988687 1.02531 -0.00647222 2.2266 0.0688056L19.4961 1.15097C21.2148 1.25867 22.0029 3.34358 20.7852 4.56127L4.5979 20.7486C3.3802 21.9663 1.2953 21.1781 1.1876 19.4594L0.105431 2.18998Z"
+                                    fill="url(#paint3_linear_263_510)"></path>
                                  <defs>
-                                    <linearGradient id="paint3_linear_263_510" x1="-0.0363755" y1="-0.0729998" x2="35.3333" y2="-0.0729991" gradientUnits="userSpaceOnUse">
+                                    <linearGradient id="paint3_linear_263_510" x1="-0.0363755" y1="-0.0729998"
+                                       x2="35.3333" y2="-0.0729991" gradientUnits="userSpaceOnUse">
                                        <stop offset="1" stop-color="var(--tj-theme-primary)"></stop>
                                        <stop offset="1" stop-color="#140C1C" stop-opacity="0"></stop>
                                     </linearGradient>
@@ -1162,19 +1365,27 @@
                               <img src="assets/img/testimonials/logo/1.png" alt="">
                            </div>
                            <div class="icon-box">
-                              <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                 <path d="M0.105431 2.18998C0.0301532 0.988687 1.02531 -0.00647222 2.2266 0.0688056L19.4961 1.15097C21.2148 1.25867 22.0029 3.34358 20.7852 4.56127L4.5979 20.7486C3.3802 21.9663 1.2953 21.1781 1.1876 19.4594L0.105431 2.18998Z" fill="url(#paint4_linear_263_512)"></path>
+                              <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                 <path
+                                    d="M0.105431 2.18998C0.0301532 0.988687 1.02531 -0.00647222 2.2266 0.0688056L19.4961 1.15097C21.2148 1.25867 22.0029 3.34358 20.7852 4.56127L4.5979 20.7486C3.3802 21.9663 1.2953 21.1781 1.1876 19.4594L0.105431 2.18998Z"
+                                    fill="url(#paint4_linear_263_512)"></path>
                                  <defs>
-                                    <linearGradient id="paint4_linear_263_512" x1="-0.0363755" y1="-0.0729998" x2="35.3333" y2="-0.0729991" gradientUnits="userSpaceOnUse">
+                                    <linearGradient id="paint4_linear_263_512" x1="-0.0363755" y1="-0.0729998"
+                                       x2="35.3333" y2="-0.0729991" gradientUnits="userSpaceOnUse">
                                        <stop offset="1" stop-color="var(--tj-theme-primary)"></stop>
                                        <stop offset="1" stop-color="#140C1C" stop-opacity="0"></stop>
                                     </linearGradient>
                                  </defs>
                               </svg>
-                              <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                 <path d="M0.105431 2.18998C0.0301532 0.988687 1.02531 -0.00647222 2.2266 0.0688056L19.4961 1.15097C21.2148 1.25867 22.0029 3.34358 20.7852 4.56127L4.5979 20.7486C3.3802 21.9663 1.2953 21.1781 1.1876 19.4594L0.105431 2.18998Z" fill="url(#paint5_linear_263_513)"></path>
+                              <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                 <path
+                                    d="M0.105431 2.18998C0.0301532 0.988687 1.02531 -0.00647222 2.2266 0.0688056L19.4961 1.15097C21.2148 1.25867 22.0029 3.34358 20.7852 4.56127L4.5979 20.7486C3.3802 21.9663 1.2953 21.1781 1.1876 19.4594L0.105431 2.18998Z"
+                                    fill="url(#paint5_linear_263_513)"></path>
                                  <defs>
-                                    <linearGradient id="paint5_linear_263_513" x1="-0.0363755" y1="-0.0729998" x2="35.3333" y2="-0.0729991" gradientUnits="userSpaceOnUse">
+                                    <linearGradient id="paint5_linear_263_513" x1="-0.0363755" y1="-0.0729998"
+                                       x2="35.3333" y2="-0.0729991" gradientUnits="userSpaceOnUse">
                                        <stop offset="1" stop-color="var(--tj-theme-primary)"></stop>
                                        <stop offset="1" stop-color="#140C1C" stop-opacity="0"></stop>
                                     </linearGradient>
@@ -1199,19 +1410,27 @@
                               <img src="assets/img/testimonials/logo/1.png" alt="">
                            </div>
                            <div class="icon-box">
-                              <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                 <path d="M0.105431 2.18998C0.0301532 0.988687 1.02531 -0.00647222 2.2266 0.0688056L19.4961 1.15097C21.2148 1.25867 22.0029 3.34358 20.7852 4.56127L4.5979 20.7486C3.3802 21.9663 1.2953 21.1781 1.1876 19.4594L0.105431 2.18998Z" fill="url(#paint6_linear_263_514)"></path>
+                              <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                 <path
+                                    d="M0.105431 2.18998C0.0301532 0.988687 1.02531 -0.00647222 2.2266 0.0688056L19.4961 1.15097C21.2148 1.25867 22.0029 3.34358 20.7852 4.56127L4.5979 20.7486C3.3802 21.9663 1.2953 21.1781 1.1876 19.4594L0.105431 2.18998Z"
+                                    fill="url(#paint6_linear_263_514)"></path>
                                  <defs>
-                                    <linearGradient id="paint6_linear_263_514" x1="-0.0363755" y1="-0.0729998" x2="35.3333" y2="-0.0729991" gradientUnits="userSpaceOnUse">
+                                    <linearGradient id="paint6_linear_263_514" x1="-0.0363755" y1="-0.0729998"
+                                       x2="35.3333" y2="-0.0729991" gradientUnits="userSpaceOnUse">
                                        <stop offset="1" stop-color="var(--tj-theme-primary)"></stop>
                                        <stop offset="1" stop-color="#140C1C" stop-opacity="0"></stop>
                                     </linearGradient>
                                  </defs>
                               </svg>
-                              <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                 <path d="M0.105431 2.18998C0.0301532 0.988687 1.02531 -0.00647222 2.2266 0.0688056L19.4961 1.15097C21.2148 1.25867 22.0029 3.34358 20.7852 4.56127L4.5979 20.7486C3.3802 21.9663 1.2953 21.1781 1.1876 19.4594L0.105431 2.18998Z" fill="url(#paint7_linear_263_515)"></path>
+                              <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                 <path
+                                    d="M0.105431 2.18998C0.0301532 0.988687 1.02531 -0.00647222 2.2266 0.0688056L19.4961 1.15097C21.2148 1.25867 22.0029 3.34358 20.7852 4.56127L4.5979 20.7486C3.3802 21.9663 1.2953 21.1781 1.1876 19.4594L0.105431 2.18998Z"
+                                    fill="url(#paint7_linear_263_515)"></path>
                                  <defs>
-                                    <linearGradient id="paint7_linear_263_515" x1="-0.0363755" y1="-0.0729998" x2="35.3333" y2="-0.0729991" gradientUnits="userSpaceOnUse">
+                                    <linearGradient id="paint7_linear_263_515" x1="-0.0363755" y1="-0.0729998"
+                                       x2="35.3333" y2="-0.0729991" gradientUnits="userSpaceOnUse">
                                        <stop offset="1" stop-color="var(--tj-theme-primary)"></stop>
                                        <stop offset="1" stop-color="#140C1C" stop-opacity="0"></stop>
                                     </linearGradient>
@@ -1236,19 +1455,27 @@
                               <img src="assets/img/testimonials/logo/1.png" alt="">
                            </div>
                            <div class="icon-box">
-                              <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                 <path d="M0.105431 2.18998C0.0301532 0.988687 1.02531 -0.00647222 2.2266 0.0688056L19.4961 1.15097C21.2148 1.25867 22.0029 3.34358 20.7852 4.56127L4.5979 20.7486C3.3802 21.9663 1.2953 21.1781 1.1876 19.4594L0.105431 2.18998Z" fill="url(#paint8_linear_263_512)"></path>
+                              <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                 <path
+                                    d="M0.105431 2.18998C0.0301532 0.988687 1.02531 -0.00647222 2.2266 0.0688056L19.4961 1.15097C21.2148 1.25867 22.0029 3.34358 20.7852 4.56127L4.5979 20.7486C3.3802 21.9663 1.2953 21.1781 1.1876 19.4594L0.105431 2.18998Z"
+                                    fill="url(#paint8_linear_263_512)"></path>
                                  <defs>
-                                    <linearGradient id="paint8_linear_263_512" x1="-0.0363755" y1="-0.0729998" x2="35.3333" y2="-0.0729991" gradientUnits="userSpaceOnUse">
+                                    <linearGradient id="paint8_linear_263_512" x1="-0.0363755" y1="-0.0729998"
+                                       x2="35.3333" y2="-0.0729991" gradientUnits="userSpaceOnUse">
                                        <stop offset="1" stop-color="var(--tj-theme-primary)"></stop>
                                        <stop offset="1" stop-color="#140C1C" stop-opacity="0"></stop>
                                     </linearGradient>
                                  </defs>
                               </svg>
-                              <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                 <path d="M0.105431 2.18998C0.0301532 0.988687 1.02531 -0.00647222 2.2266 0.0688056L19.4961 1.15097C21.2148 1.25867 22.0029 3.34358 20.7852 4.56127L4.5979 20.7486C3.3802 21.9663 1.2953 21.1781 1.1876 19.4594L0.105431 2.18998Z" fill="url(#paint9_linear_263_513)"></path>
+                              <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                 <path
+                                    d="M0.105431 2.18998C0.0301532 0.988687 1.02531 -0.00647222 2.2266 0.0688056L19.4961 1.15097C21.2148 1.25867 22.0029 3.34358 20.7852 4.56127L4.5979 20.7486C3.3802 21.9663 1.2953 21.1781 1.1876 19.4594L0.105431 2.18998Z"
+                                    fill="url(#paint9_linear_263_513)"></path>
                                  <defs>
-                                    <linearGradient id="paint9_linear_263_513" x1="-0.0363755" y1="-0.0729998" x2="35.3333" y2="-0.0729991" gradientUnits="userSpaceOnUse">
+                                    <linearGradient id="paint9_linear_263_513" x1="-0.0363755" y1="-0.0729998"
+                                       x2="35.3333" y2="-0.0729991" gradientUnits="userSpaceOnUse">
                                        <stop offset="1" stop-color="var(--tj-theme-primary)"></stop>
                                        <stop offset="1" stop-color="#140C1C" stop-opacity="0"></stop>
                                     </linearGradient>
@@ -1273,19 +1500,27 @@
                               <img src="assets/img/testimonials/logo/1.png" alt="">
                            </div>
                            <div class="icon-box">
-                              <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                 <path d="M0.105431 2.18998C0.0301532 0.988687 1.02531 -0.00647222 2.2266 0.0688056L19.4961 1.15097C21.2148 1.25867 22.0029 3.34358 20.7852 4.56127L4.5979 20.7486C3.3802 21.9663 1.2953 21.1781 1.1876 19.4594L0.105431 2.18998Z" fill="url(#paint10_linear_263_514)"></path>
+                              <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                 <path
+                                    d="M0.105431 2.18998C0.0301532 0.988687 1.02531 -0.00647222 2.2266 0.0688056L19.4961 1.15097C21.2148 1.25867 22.0029 3.34358 20.7852 4.56127L4.5979 20.7486C3.3802 21.9663 1.2953 21.1781 1.1876 19.4594L0.105431 2.18998Z"
+                                    fill="url(#paint10_linear_263_514)"></path>
                                  <defs>
-                                    <linearGradient id="paint10_linear_263_514" x1="-0.0363755" y1="-0.0729998" x2="35.3333" y2="-0.0729991" gradientUnits="userSpaceOnUse">
+                                    <linearGradient id="paint10_linear_263_514" x1="-0.0363755" y1="-0.0729998"
+                                       x2="35.3333" y2="-0.0729991" gradientUnits="userSpaceOnUse">
                                        <stop offset="1" stop-color="var(--tj-theme-primary)"></stop>
                                        <stop offset="1" stop-color="#140C1C" stop-opacity="0"></stop>
                                     </linearGradient>
                                  </defs>
                               </svg>
-                              <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                 <path d="M0.105431 2.18998C0.0301532 0.988687 1.02531 -0.00647222 2.2266 0.0688056L19.4961 1.15097C21.2148 1.25867 22.0029 3.34358 20.7852 4.56127L4.5979 20.7486C3.3802 21.9663 1.2953 21.1781 1.1876 19.4594L0.105431 2.18998Z" fill="url(#paint11_linear_263_515)"></path>
+                              <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                 <path
+                                    d="M0.105431 2.18998C0.0301532 0.988687 1.02531 -0.00647222 2.2266 0.0688056L19.4961 1.15097C21.2148 1.25867 22.0029 3.34358 20.7852 4.56127L4.5979 20.7486C3.3802 21.9663 1.2953 21.1781 1.1876 19.4594L0.105431 2.18998Z"
+                                    fill="url(#paint11_linear_263_515)"></path>
                                  <defs>
-                                    <linearGradient id="paint11_linear_263_515" x1="-0.0363755" y1="-0.0729998" x2="35.3333" y2="-0.0729991" gradientUnits="userSpaceOnUse">
+                                    <linearGradient id="paint11_linear_263_515" x1="-0.0363755" y1="-0.0729998"
+                                       x2="35.3333" y2="-0.0729991" gradientUnits="userSpaceOnUse">
                                        <stop offset="1" stop-color="var(--tj-theme-primary)"></stop>
                                        <stop offset="1" stop-color="#140C1C" stop-opacity="0"></stop>
                                     </linearGradient>
@@ -1316,111 +1551,200 @@
       <!-- start: Faq Area -->
       <section class="faq-section">
          <div class="container">
-           <div class="row">
-             <div class="col-md-12">
-               <div class="section-header text-center">
-                 <h2 class="section-title wow fadeInUp" data-wow-delay=".3s">Frequently Asked Questions</h2>
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="section-header text-center">
+                     <h2 class="section-title wow fadeInUp" data-wow-delay=".3s">Frequently Asked Questions</h2>
+                  </div>
                </div>
-             </div>
-           </div>
-           <div class="row">
-             <div class="col-12">
-               <div class="accordion tj-faq" id="faqOne">
-                 <!-- Cancellation Policy -->
-                 <div class="accordion-item active wow fadeInUp" data-wow-delay=".4s">
-                   <button class="faq-title" type="button" data-bs-toggle="collapse" data-bs-target="#faq-1" aria-expanded="true">
-                     What is your cancellation policy?
-                   </button>
-                   <div id="faq-1" class="collapse show" data-bs-parent="#faqOne">
-                     <div class="accordion-body faq-text">
-                       <p>
-                         You may cancel free of charge up to 48 hours before check-in. Cancellations within 48 hours incur a one-night fee. No-shows will be charged the full stay.
-                       </p>
+            </div>
+            <div class="row">
+               <div class="col-12">
+                  <div class="accordion tj-faq" id="faqOne">
+                     <!-- Cancellation Policy -->
+                     <div class="accordion-item active wow fadeInUp" data-wow-delay=".4s">
+                        <button class="faq-title" type="button" data-bs-toggle="collapse" data-bs-target="#faq-1"
+                           aria-expanded="true">
+                           What is your cancellation policy?
+                        </button>
+                        <div id="faq-1" class="collapse show" data-bs-parent="#faqOne">
+                           <div class="accordion-body faq-text">
+                              <p>
+                                 You may cancel free of charge up to 48 hours before check-in. Cancellations within 48
+                                 hours incur a one-night fee. No-shows will be charged the full stay.
+                              </p>
+                           </div>
+                        </div>
                      </div>
-                   </div>
-                 </div>
-                 <!-- Check-in / Check-out Times -->
-                 <div class="accordion-item wow fadeInUp" data-wow-delay=".5s">
-                   <button class="faq-title collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-2" aria-expanded="false">
-                     What are your check-in and check-out times?
-                   </button>
-                   <div id="faq-2" class="collapse" data-bs-parent="#faqOne">
-                     <div class="accordion-body faq-text">
-                       <p>
-                         Check-in begins at 3:00 PM and check-out is by 11:00 AM. Early check-in or late check-out may be available upon request, subject to availability.
-                       </p>
+                     <!-- Check-in / Check-out Times -->
+                     <div class="accordion-item wow fadeInUp" data-wow-delay=".5s">
+                        <button class="faq-title collapsed" type="button" data-bs-toggle="collapse"
+                           data-bs-target="#faq-2" aria-expanded="false">
+                           What are your check-in and check-out times?
+                        </button>
+                        <div id="faq-2" class="collapse" data-bs-parent="#faqOne">
+                           <div class="accordion-body faq-text">
+                              <p>
+                                 Check-in begins at 3:00 PM and check-out is by 11:00 AM. Early check-in or late
+                                 check-out may be available upon request, subject to availability.
+                              </p>
+                           </div>
+                        </div>
                      </div>
-                   </div>
-                 </div>
-                 <!-- Breakfast Included -->
-                 <div class="accordion-item wow fadeInUp" data-wow-delay=".6s">
-                   <button class="faq-title collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-3" aria-expanded="false">
-                     Is breakfast included in the room rate?
-                   </button>
-                   <div id="faq-3" class="collapse" data-bs-parent="#faqOne">
-                     <div class="accordion-body faq-text">
-                       <p>
-                         Our standard room rates include a complimentary continental breakfast. For buffet or à la carte options, please select the “Breakfast Included” package when booking.
-                       </p>
+                     <!-- Breakfast Included -->
+                     <div class="accordion-item wow fadeInUp" data-wow-delay=".6s">
+                        <button class="faq-title collapsed" type="button" data-bs-toggle="collapse"
+                           data-bs-target="#faq-3" aria-expanded="false">
+                           Is breakfast included in the room rate?
+                        </button>
+                        <div id="faq-3" class="collapse" data-bs-parent="#faqOne">
+                           <div class="accordion-body faq-text">
+                              <p>
+                                 Our standard room rates include a complimentary continental breakfast. For buffet or à
+                                 la carte options, please select the "Breakfast Included" package when booking.
+                              </p>
+                           </div>
+                        </div>
                      </div>
-                   </div>
-                 </div>
-                 <!-- Airport Shuttle -->
-                 <div class="accordion-item wow fadeInUp" data-wow-delay=".7s">
-                   <button class="faq-title collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-4" aria-expanded="false">
-                     Do you offer airport shuttle service?
-                   </button>
-                   <div id="faq-4" class="collapse" data-bs-parent="#faqOne">
-                     <div class="accordion-body faq-text">
-                       <p>
-                         Yes, we provide a complimentary shuttle between 7:00 AM and 10:00 PM. Please schedule your pick-up at least 24 hours in advance by contacting our concierge.
-                       </p>
+                     <!-- Airport Shuttle -->
+                     <div class="accordion-item wow fadeInUp" data-wow-delay=".7s">
+                        <button class="faq-title collapsed" type="button" data-bs-toggle="collapse"
+                           data-bs-target="#faq-4" aria-expanded="false">
+                           Do you offer airport shuttle service?
+                        </button>
+                        <div id="faq-4" class="collapse" data-bs-parent="#faqOne">
+                           <div class="accordion-body faq-text">
+                              <p>
+                                 Yes, we provide a complimentary shuttle between 7:00 AM and 10:00 PM. Please schedule
+                                 your pick-up at least 24 hours in advance by contacting our concierge.
+                              </p>
+                           </div>
+                        </div>
                      </div>
-                   </div>
-                 </div>
-                 <!-- Group Booking Discounts -->
-                 <div class="accordion-item wow fadeInUp" data-wow-delay=".8s">
-                   <button class="faq-title collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-5" aria-expanded="false">
-                     Are there discounts for group bookings?
-                   </button>
-                   <div id="faq-5" class="collapse" data-bs-parent="#faqOne">
-                     <div class="accordion-body faq-text">
-                       <p>
-                         We offer special group rates for bookings of 5 rooms or more. Please reach out to sales@wavehospitality.com for a customized quote and additional perks.
-                       </p>
+                     <!-- Group Booking Discounts -->
+                     <div class="accordion-item wow fadeInUp" data-wow-delay=".8s">
+                        <button class="faq-title collapsed" type="button" data-bs-toggle="collapse"
+                           data-bs-target="#faq-5" aria-expanded="false">
+                           Are there discounts for group bookings?
+                        </button>
+                        <div id="faq-5" class="collapse" data-bs-parent="#faqOne">
+                           <div class="accordion-body faq-text">
+                              <p>
+                                 We offer special group rates for bookings of 5 rooms or more. Please reach out to
+                                 sales@wavehospitality.com for a customized quote and additional perks.
+                              </p>
+                           </div>
+                        </div>
                      </div>
-                   </div>
-                 </div>
+                  </div>
                </div>
-             </div>
-           </div>
+            </div>
          </div>
-       </section>
-       
+      </section>
+
       <!-- end: Faq Area -->
 
       <!-- start: Text Area -->
       <section class="text-section">
          <div class="container">
-           <div class="row">
-             <div class="col-12">
-               <div class="section-header d-flex justify-content-between align-items-center">
-                 <div class="heading-left">
-                   <p class="wow fadeInUp" data-wow-delay=".3s">Ready to plan your stay?</p>
-                   <h2 id="anim" class="section-title wow fadeInUp" data-wow-delay=".4s">Get in Touch</h2>
-                 </div>
-                 <!-- <div class="chat-mail wow fadeInRight" data-wow-delay=".5s">
+            <div class="row">
+               <div class="col-12">
+                  <div class="section-header d-flex justify-content-between align-items-center">
+                     <div class="heading-left">
+                        <p class="wow fadeInUp" data-wow-delay=".3s">Ready to plan your stay?</p>
+                        <h2 id="anim" class="section-title wow fadeInUp" data-wow-delay=".4s">Get in Touch</h2>
+                     </div>
+                     <!-- <div class="chat-mail wow fadeInRight" data-wow-delay=".5s">
                    <a class="link" href="mailto:contact@wavehospitality.com">
                      contact@wavehospitality.com <i class="fa-light fa-arrow-right"></i>
                    </a>
                  </div> -->
+                  </div>
                </div>
-             </div>
-           </div>
+            </div>
          </div>
-       </section>
-       
+      </section>
+
       <!-- end: Text Area -->
+
+      <!-- Enhanced Why Choose Us Section -->
+      <section class="why-choose-section">
+         <div class="container">
+            <div class="why-choose-card">
+               <h2 class="why-choose-title gradient-text">Why Choose Wave Hospitality</h2>
+               <ul class="why-choose-list">
+                  <li><i class="fa-solid fa-award"></i> Over 10 Years of Industry Experience</li>
+                  <li><i class="fa-solid fa-handshake"></i> Trusted by Leading Hotel & Restaurant Brands</li>
+                  <li><i class="fa-solid fa-heart"></i> Family-Owned with a Passion for Service</li>
+                  <li><i class="fa-solid fa-chart-line"></i> Scalable Operations with Local Commitment</li>
+                  <li><i class="fa-solid fa-people-group"></i> Proven Success in Hotel + Restaurant Synergy</li>
+               </ul>
+            </div>
+         </div>
+         <style>
+            .why-choose-section {
+               padding: 64px 0 64px 0;
+               background: none;
+            }
+
+            .why-choose-card {
+               background: rgba(160, 132, 255, 0.10);
+               border-radius: 24px;
+               box-shadow: 0 4px 32px 0 rgba(112, 0, 255, 0.10);
+               padding: 48px 32px 36px 32px;
+               max-width: 700px;
+               margin: 0 auto;
+               text-align: center;
+            }
+
+            .why-choose-title.gradient-text {
+               font-size: 2.2rem;
+               font-weight: 800;
+               background: linear-gradient(90deg, #a084ff 0%, #7000ff 100%);
+               -webkit-background-clip: text;
+               -webkit-text-fill-color: transparent;
+               background-clip: text;
+               text-fill-color: transparent;
+               margin-bottom: 28px;
+            }
+
+            .why-choose-list {
+               list-style: none;
+               padding: 0;
+               margin: 0;
+            }
+
+            .why-choose-list li {
+               color: #fff;
+               font-size: 1.15rem;
+               margin-bottom: 20px;
+               display: flex;
+               align-items: center;
+               gap: 14px;
+               font-weight: 500;
+               justify-content: center;
+            }
+
+            .why-choose-list li i {
+               color: #a084ff;
+               font-size: 1.3em;
+            }
+
+            @media (max-width: 700px) {
+               .why-choose-card {
+                  padding: 28px 8px 18px 8px;
+               }
+
+               .why-choose-title.gradient-text {
+                  font-size: 1.5rem;
+               }
+
+               .why-choose-list li {
+                  font-size: 1rem;
+               }
+            }
+         </style>
+      </section>
    </main>
 
    <!-- FOOTER AREA START -->
@@ -1489,4 +1813,6 @@
    <script src="assets/js/main.js"></script>
 
 
-</body></html>
+</body>
+
+</html>

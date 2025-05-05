@@ -1,10 +1,10 @@
 /* Header CSS */
-.tj-header-area.header-3 .logo-box {
+.tj-header-area.header-3 . {
 	max-width: 200px;
 	width: 100%;
 	margin-right: 0;
 }
-.tj-header-area.header-3 .logo-box img {
+.tj-header-area.header-3 . img {
 	width: 100%;
 }
 .tj-header-area.header-3 .header-button {
@@ -477,7 +477,7 @@
 .testimonial-section.style-3 .testimonial-item {
 	max-width: 100%;
 }
-.testimonial-section.style-3 .testimonial-item .logo-box {
+.testimonial-section.style-3 .testimonial-item . {
 	margin-bottom: 30px;
 }
 .testimonial-section.style-3 .testimonials-widget .testimonial-item .quote {
