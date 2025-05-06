@@ -72,7 +72,7 @@
             <div class="col-12 d-flex flex-wrap justify-content-between align-items-center">
                <div class="logo-box">
                   <a href="index.html">
-                     <img src="assets/img/logo/logo.png"  alt="Logo" class="img-logo">
+                     <img src="assets/img/logo/wave.png"  alt="Logo" class="img-logo">
                   </a>
                </div>
                <div class="header-menu" id="headerMenu">
@@ -205,9 +205,9 @@
       <div class="container">
          <div class="row">
             <div class="col-12 d-flex flex-wrap justify-content-between align-items-center">
-               <div class="logo-box">
+               <div class="">
                   <a href="index.html">
-                     <img src="assets/img/logo/logo.png" alt="Logo" class="img-logo">
+                     <img src="assets/img/logo/wave.png" alt="Logo" class="img-logo">
                   </a>
                </div>
                <div class="header-menu">
@@ -387,6 +387,122 @@
       </section>
       <!-- end: Portfolio Section -->
 
+      <!-- Our Portfolio Card: At the bottom -->
+      <section class="portfolio-intro-section bottom-portfolio-card enhanced-bottom-portfolio">
+        <div class="container">
+          <div class="portfolio-intro-card glass-card">
+            <h2 class="portfolio-intro-title gradient-text">Our Portfolio</h2>
+            <p class="portfolio-intro-desc">Proudly partnering with world-class hotel brands and operating acclaimed restaurants across Canada.</p>
+            <div class="portfolio-intro-grid">
+              <div class="portfolio-intro-col portfolio-card-col">
+                <h3><i class="fa-solid fa-hotel"></i> Hotel Brands We Work With:</h3>
+                <ul>
+                  <li><i class="fa-brands fa-hilton"></i> Hilton Hotels & Resorts</li>
+                  <li><i class="fa-solid fa-bed"></i> Holiday Inn & Holiday Inn Express (IHG)</li>
+                  <li><i class="fa-solid fa-building"></i> Wyndham Hotels & Resorts</li>
+                  <li><i class="fa-solid fa-star"></i> Best Western Hotels & Resorts</li>
+                  <li><i class="fa-solid fa-key"></i> Choice Hotels International</li>
+                </ul>
+              </div>
+              <div class="portfolio-intro-col portfolio-card-col">
+                <h3><i class="fa-solid fa-utensils"></i> Restaurant Operations:</h3>
+                <ul>
+                  <li><i class="fa-solid fa-plate-wheat"></i> Bella's Restaurant – Family dining, locally inspired cuisine</li>
+                  <li><i class="fa-solid fa-people-group"></i> Shelly's Restaurant – Community-focused, comfort food classics</li>
+                  <li><i class="fa-solid fa-mug-saucer"></i> Perkins Restaurant – National franchise with full-service breakfast, lunch & dinner</li>
+                  <li><i class="fa-solid fa-futbol"></i> Shoeless Joe's Sports Grill – Tenant-operated, high-energy sports dining</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <style>
+        .enhanced-bottom-portfolio {
+          padding-top: 80px !important;
+          padding-bottom: 80px !important;
+        }
+        .portfolio-intro-card.glass-card {
+          background: none;
+          box-shadow: none;
+          border: none;
+          padding: 0;
+        }
+        .portfolio-intro-title.gradient-text {
+          font-size: 2.8rem;
+          font-weight: 900;
+          margin-bottom: 18px;
+          text-align: center;
+          letter-spacing: 0.01em;
+        }
+        .portfolio-intro-desc {
+          color: #e0d7ff;
+          font-size: 1.18rem;
+          text-align: center;
+          margin-bottom: 48px;
+          font-weight: 500;
+        }
+        .portfolio-intro-grid {
+          display: flex;
+          gap: 48px;
+          flex-wrap: wrap;
+          justify-content: center;
+          z-index: 1;
+          position: relative;
+        }
+        .portfolio-card-col {
+          background: rgba(160, 132, 255, 0.10);
+          border-radius: 22px;
+          box-shadow: 0 4px 32px 0 rgba(112,0,255,0.10);
+          padding: 36px 28px 28px 28px;
+          margin-bottom: 0;
+          min-width: 300px;
+          max-width: 420px;
+          transition: box-shadow 0.2s, transform 0.2s;
+        }
+        .portfolio-card-col:hover {
+          box-shadow: 0 8px 32px 0 rgba(112,0,255,0.18);
+          transform: translateY(-6px) scale(1.03);
+        }
+        .portfolio-card-col h3 {
+          font-size: 1.25rem;
+          font-weight: 700;
+          color: #a084ff;
+          margin-bottom: 20px;
+          display: flex;
+          align-items: center;
+          gap: 8px;
+        }
+        .portfolio-card-col ul {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+        }
+        .portfolio-card-col li {
+          color: #fff;
+          font-size: 1.08rem;
+          margin-bottom: 16px;
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          font-weight: 500;
+          letter-spacing: 0.01em;
+        }
+        .portfolio-card-col li i {
+          color: #a084ff;
+          font-size: 1.15em;
+        }
+        @media (max-width: 900px) {
+          .portfolio-intro-grid {
+            flex-direction: column;
+            gap: 32px;
+          }
+          .portfolio-card-col {
+            padding: 24px 10px 16px 10px;
+          }
+        }
+        </style>
+      </section>
+
       <!-- start: Portfolio Popup -->
       <div id="portfolio-wrapper" class="popup_content_area zoom-anim-dialog mfp-hide" data-lenis-prevent="">
          <button class="modal-close-btn">
@@ -480,7 +596,7 @@
                      </li>
                   </ul>
                </div>
-               <div class="footer-logo-box">
+               <div class="footer-">
                   <a href="#"><img src="assets/img/logo/logo.png" alt="Logo" class="img-logo"></a>
                </div>
                <div class="footer-menu">
@@ -529,116 +645,160 @@
    <script>
      $(document).ready(function() {
        // Sample restaurants data with website URLs
-      const restaurants = [
-    {
-      id: 1,
-      title: "Quality Hotel",
-      location: "247 Trans-Canada Hwy, Clarenville, NL A5A 1Y4, Canada",
-      description: "Quality Hotel Clarenville, family-owned, award-winning, rebuilt in 2018. Exceptional staff, warm service, modern comfort—where guests truly feel at home.",
-      cuisine: "Contemporary Canadian",
-      priceRange: "$$$",
-      hours: "3-star Hotel",
-      capacity: "60 seats",
-      amenities: ["Fine Dining", "Wine Cellar", "Private Rooms", "View"],
-      image: "https://lh3.googleusercontent.com/p/AF1QipO3qCL2MYH7JsbwpGblkEkm3ZbkzE_xs5dxIfuq=s1360-w1360-h1020",
-      specialties: ["Maple Glazed Salmon", "Alberta Beef Tenderloin", "Wild Mushroom Risotto"],
-      href: "https://qualityhotelclarenville.com/"
-    },
-    {
-      id: 2,
-      title: "Comfort Inn",
-      location: "112 Trans-Canada Hwy, Gander, NL A1V 1P8, Canada",
-      description: "Award-winning hotel with heart. Loyal staff, family values, guest-focused service, deep connections, and genuine Newfoundland hospitality that feels like home.",
-      cuisine: "French-Canadian Bistro",
-      priceRange: "$$",
-      hours: "3-star Hotel",
-      capacity: "80 seats",
-      amenities: ["Outdoor Seating", "Lake View", "Bar", "Brunch"],
-      image: "https://lh3.googleusercontent.com/p/AF1QipPU_usD7t4es63oyITq3MamfXCdPbN1GKWBhoOD=s680-w680-h510",
-      href: "https://comfortinngander.com/"
-    },
-    {
-      id: 3,
-      title: "Best Western Plus Lamplighter Inn & Conference Centre",
-      location: "591 Wellington Rd, London, ON N6C 4R3, Canada",
-      description: "Lamplighter Inn offers comfort, convenience, event spaces, a stunning atrium, pool, waterslide, and exceptional service for every type of guest.",
-      cuisine: "International Tapas",
-      priceRange: "$$$",
-      hours: "3-star Hotel ",
-      capacity: "40 seats",
-      amenities: ["City Views", "Cocktail Bar", "Live Music", "Lounge"],
-      image: "https://lh3.googleusercontent.com/p/AF1QipOcPWj_31KyXl_nLJPZTZjYkgBQIbi2yAR_DPGz=s1360-w1360-h1020",
-      specialties: ["Charcuterie Board", "Seafood Tower", "Craft Cocktails"],
-      href: "https://www.bestwestern.com/en_US/book/hotel-rooms.66016.html?iata=00171880&ssob=BLBWI0004G&cid=BLBWI0004G:google:gmb:66016"
-    },
-    {
-      id: 4,
-      title: "Hampton Inn by Hilton London",
-      location: "840 Exeter Rd, London, ON N6E 1L5, Canada",
-      description: "East London hotel near Shoreditch with free breakfast, fitness center, and easy access to Old Street Station, museums, and attractions nearby.",
-      cuisine: "Café & Pastries",
-      priceRange: "$",
-      hours: "3-star Hotel",
-      capacity: "30 seats",
-      amenities: ["Garden View", "Pastries", "Coffee Bar", "Breakfast"],
-      image: "https://lh3.googleusercontent.com/p/AF1QipMdyL6oeQ7n_6IjROPCt9kCreM65WmTGGnWEEE=s1360-w1360-h1020",
-      specialties: ["Artisan Coffee", "House-made Pastries", "Breakfast Plates"],
-      href: "https://www.hamptoninn.com/en/hotels/us/oh/london/hampton-london-hotel-london-ohio"
-    },
-     {id: 5,
-      title: "Homewood Suites by Hilton Sudbury",
-      location: "2270 Regent St., Sudbury, Ontario, P3E 0B4, Canada",
-      description: "Pet-friendly suites in South Sudbury with free WiFi, breakfast, and socials. Near Science North, art galleries, and local museums.",
-      cuisine: "Café & Pastries",
-      priceRange: "$",
-      hours: "3-star Hotel",
-      capacity: "30 seats",
-      amenities: ["Garden View", "Pastries", "Coffee Bar", "Breakfast"],
-      image: "https://lh3.googleusercontent.com/p/AF1QipM3YO7duAtQm9J5uckshMmVBiszKAR7G2WLT3Ac=s1360-w1360-h1020",
-      specialties: ["Artisan Coffee", "House-made Pastries", "Breakfast Plates"],
-      href: "https://www.ihg.com/homewoodsuites/hotels/us/en/sudbury/sudhb/hoteldetail"
-    },
-    {id: 6,
-      title: "Travelodge Hotel by Wyndham Sudbury",
-      location: "1401 Paris St, Greater Sudbury, ON P3E 3B6, Canada",
-      description: "Pet-friendly hotel by Ramsey Lake with free parking, indoor pool, WiFi, and easy access to universities, trails, attractions, and dining.",
-      cuisine: "Café & Pastries",
-      priceRange: "$",
-      hours: "2-star Hotel",
-      capacity: "30 seats",
-      amenities: ["Garden View", "Pastries", "Coffee Bar", "Breakfast"],
-      image: "https://lh3.googleusercontent.com/gps-cs-s/AB5caB_Re3O6O8A-eIc2lRaOB3wGjZna8obpki7UC5WlitlCk1MTeaD1dIfHBEe7kEYOwLJ5CslwXDjasTInJhgCcqwvFADE1o9PD3Ym2etzgckxeOMOvaghtMgPUpx1NzxZ5o2cKfrX=s1360-w1360-h1020",
-      specialties: ["Artisan Coffee", "House-made Pastries", "Breakfast Plates"],
-      href: "https://www.travelodge.com/en-ca/hotels/ontario/sudbury/travelodge-sudbury-hotel"
-    },
-    {id: 7,
-      title: "Holiday Inn Express Stellarton-New Glasgow, an IHG Hotel",
-      location: "86 Lawrence Blvd, Stellarton, NS B0K 1S0, Canada",
-      description: "Holiday Inn Express Stellarton-New Glasgow offers a pet-friendly stay with indoor pool, breakfast, free Wi-Fi, and convenient amenities.",
-      cuisine: "Café & Pastries",
-      priceRange: "$",
-      hours: "3-star Hotel",
-      capacity: "30 seats",
-      amenities: ["Garden View", "Pastries", "Coffee Bar", "Breakfast"],
-      image: "https://lh3.googleusercontent.com/proxy/SCYkTWX19mTItaZiWMwVRdZmcSHUmeFHGz8SBAR_8DGA3CCMJePiDkR_B7TIFplu9Gi545Y7-AliywiDG_7vZi7Z7WrBAKhMoSs-i_uWLnHdojZVDsxmWkciAXcK_gO-OrGTpNBnHcP3BQ2j-n49r0_BbaVyWg=s1360-w1360-h1020",
-      specialties: ["Artisan Coffee", "House-made Pastries", "Breakfast Plates"],
-      href: "https://www.ihg.com/holidayinn/hotels/us/en/stellarton/stelh/hoteldetail"
-    },
-    
-    {id: 8,
-      title: "Shelly's Tap and Grill Restaurant, London Ontario",
-      location: "591 Wellington Rd S, London, ON N6C 4R3, Canada",
-      description: "Founded in 1958, Perkins operates 290 restaurants offering diverse, moderately priced meals, including breakfast, lunch, dinner, and bakery items.",
-      cuisine: "Café & Pastries",
-      priceRange: "$",
-      hours: "7 am to 9 pm",
-      capacity: "30 seats",
-      amenities: ["Garden View", "Pastries", "Coffee Bar", "Breakfast"],
-      image: "https://lh3.googleusercontent.com/p/AF1QipO7wW_2XIlU-rq9xbjR2jlD7Ff-o6ChO1P9bqBr=s1360-w1360-h1020",
-      specialties: ["Artisan Coffee", "House-made Pastries", "Breakfast Plates"],
-      href: "https://www.shellystapandgrill.com/"
-    },
-  ];
+       const restaurants = [
+  {
+    id: 1,
+    type: "Hotel",
+    title: "Quality Hotel",
+    location: "247 Trans-Canada Hwy, Clarenville, NL A5A 1Y4, Canada",
+    description: "Quality Hotel Clarenville, family-owned, award-winning, rebuilt in 2018. Exceptional staff, warm service, modern comfort—where guests truly feel at home.",
+    cuisine: "Contemporary Canadian",
+    priceRange: "$$$",
+    hours: "3-star Hotel",
+    capacity: "60 seats",
+    amenities: ["Fine Dining", "Wine Cellar", "Private Rooms", "View"],
+    image: "https://lh3.googleusercontent.com/p/AF1QipO3qCL2MYH7JsbwpGblkEkm3ZbkzE_xs5dxIfuq=s1360-w1360-h1020",
+    specialties: ["Maple Glazed Salmon", "Alberta Beef Tenderloin", "Wild Mushroom Risotto"],
+    href: "https://qualityhotelclarenville.com/"
+  },
+  {
+    id: 2,
+    type: "Hotel",
+    title: "Comfort Inn",
+    location: "112 Trans-Canada Hwy, Gander, NL A1V 1P8, Canada",
+    description: "Award-winning hotel with heart. Loyal staff, family values, guest-focused service, deep connections, and genuine Newfoundland hospitality that feels like home.",
+    cuisine: "French-Canadian Bistro",
+    priceRange: "$$",
+    hours: "3-star Hotel",
+    capacity: "80 seats",
+    amenities: ["Outdoor Seating", "Lake View", "Bar", "Brunch"],
+    image: "https://lh3.googleusercontent.com/p/AF1QipPU_usD7t4es63oyITq3MamfXCdPbN1GKWBhoOD=s680-w680-h510",
+    href: "https://comfortinngander.com/"
+  },
+  {
+    id: 3,
+    type: "Hotel",
+    title: "Best Western Plus Lamplighter Inn & Conference Centre",
+    location: "591 Wellington Rd, London, ON N6C 4R3, Canada",
+    description: "Lamplighter Inn offers comfort, convenience, event spaces, a stunning atrium, pool, waterslide, and exceptional service for every type of guest.",
+    cuisine: "International Tapas",
+    priceRange: "$$$",
+    hours: "3-star Hotel ",
+    capacity: "40 seats",
+    amenities: ["City Views", "Cocktail Bar", "Live Music", "Lounge"],
+    image: "https://lh3.googleusercontent.com/p/AF1QipOcPWj_31KyXl_nLJPZTZjYkgBQIbi2yAR_DPGz=s1360-w1360-h1020",
+    specialties: ["Charcuterie Board", "Seafood Tower", "Craft Cocktails"],
+    href: "https://www.bestwestern.com/en_US/book/hotel-rooms.66016.html?iata=00171880&ssob=BLBWI0004G&cid=BLBWI0004G:google:gmb:66016"
+  },
+  {
+    id: 4,
+    type: "Hotel",
+    title: "Hampton Inn by Hilton London",
+    location: "840 Exeter Rd, London, ON N6E 1L5, Canada",
+    description: "East London hotel near Shoreditch with free breakfast, fitness center, and easy access to Old Street Station, museums, and attractions nearby.",
+    cuisine: "Café & Pastries",
+    priceRange: "$",
+    hours: "3-star Hotel",
+    capacity: "30 seats",
+    amenities: ["Garden View", "Pastries", "Coffee Bar", "Breakfast"],
+    image: "https://lh3.googleusercontent.com/p/AF1QipMdyL6oeQ7n_6IjROPCt9kCreM65WmTGGnWEEE=s1360-w1360-h1020",
+    specialties: ["Artisan Coffee", "House-made Pastries", "Breakfast Plates"],
+    href: "https://www.hamptoninn.com/en/hotels/us/oh/london/hampton-london-hotel-london-ohio"
+  },
+  {
+    id: 5,
+    type: "Hotel",
+    title: "Homewood Suites by Hilton Sudbury",
+    location: "2270 Regent St., Sudbury, Ontario, P3E 0B4, Canada",
+    description: "Pet-friendly suites in South Sudbury with free WiFi, breakfast, and socials. Near Science North, art galleries, and local museums.",
+    cuisine: "Café & Pastries",
+    priceRange: "$",
+    hours: "3-star Hotel",
+    capacity: "30 seats",
+    amenities: ["Garden View", "Pastries", "Coffee Bar", "Breakfast"],
+    image: "https://lh3.googleusercontent.com/p/AF1QipM3YO7duAtQm9J5uckshMmVBiszKAR7G2WLT3Ac=s1360-w1360-h1020",
+    specialties: ["Artisan Coffee", "House-made Pastries", "Breakfast Plates"],
+    href: "https://www.ihg.com/homewoodsuites/hotels/us/en/sudbury/sudhb/hoteldetail"
+  },
+  {
+    id: 6,
+    type: "Hotel",
+    title: "Travelodge Hotel by Wyndham Sudbury",
+    location: "1401 Paris St, Greater Sudbury, ON P3E 3B6, Canada",
+    description: "Pet-friendly hotel by Ramsey Lake with free parking, indoor pool, WiFi, and easy access to universities, trails, attractions, and dining.",
+    cuisine: "Café & Pastries",
+    priceRange: "$",
+    hours: "2-star Hotel",
+    capacity: "30 seats",
+    amenities: ["Garden View", "Pastries", "Coffee Bar", "Breakfast"],
+    image: "https://lh3.googleusercontent.com/gps-cs-s/AB5caB_Re3O6O8A-eIc2lRaOB3wGjZna8obpki7UC5WlitlCk1MTeaD1dIfHBEe7kEYOwLJ5CslwXDjasTInJhgCcqwvFADE1o9PD3Ym2etzgckxeOMOvaghtMgPUpx1NzxZ5o2cKfrX=s1360-w1360-h1020",
+    specialties: ["Artisan Coffee", "House-made Pastries", "Breakfast Plates"],
+    href: "https://www.travelodge.com/en-ca/hotels/ontario/sudbury/travelodge-sudbury-hotel"
+  },
+  {
+    id: 7,
+    type: "Hotel",
+    title: "Holiday Inn Express Stellarton-New Glasgow, an IHG Hotel",
+    location: "86 Lawrence Blvd, Stellarton, NS B0K 1S0, Canada",
+    description: "Holiday Inn Express Stellarton-New Glasgow offers a pet-friendly stay with indoor pool, breakfast, free Wi-Fi, and convenient amenities.",
+    cuisine: "Café & Pastries",
+    priceRange: "$",
+    hours: "3-star Hotel",
+    capacity: "30 seats",
+    amenities: ["Garden View", "Pastries", "Coffee Bar", "Breakfast"],
+    image: "https://lh3.googleusercontent.com/proxy/SCYkTWX19mTItaZiWMwVRdZmcSHUmeFHGz8SBAR_8DGA3CCMJePiDkR_B7TIFplu9Gi545Y7-AliywiDG_7vZi7Z7WrBAKhMoSs-i_uWLnHdojZVDsxmWkciAXcK_gO-OrGTpNBnHcP3BQ2j-n49r0_BbaVyWg=s1360-w1360-h1020",
+    specialties: ["Artisan Coffee", "House-made Pastries", "Breakfast Plates"],
+    href: "https://www.ihg.com/holidayinn/hotels/us/en/stellarton/stelh/hoteldetail"
+  },
+  {
+    id: 8,
+    type: "Restaurant",
+    title: "Shelly's Tap and Grill Restaurant, London Ontario",
+    location: "591 Wellington Rd S, London, ON N6C 4R3, Canada",
+    description: "Founded in 1958, Perkins operates 290 restaurants offering diverse, moderately priced meals, including breakfast, lunch, dinner, and bakery items.",
+    cuisine: "Café & Pastries",
+    priceRange: "$",
+    hours: "7 am to 9 pm",
+    capacity: "30 seats",
+    amenities: ["Garden View", "Pastries", "Coffee Bar", "Breakfast"],
+    image: "https://lh3.googleusercontent.com/p/AF1QipO7wW_2XIlU-rq9xbjR2jlD7Ff-o6ChO1P9bqBr=s1360-w1360-h1020",
+    specialties: ["Artisan Coffee", "House-made Pastries", "Breakfast Plates"],
+    href: "https://www.shellystapandgrill.com/"
+  },
+  {
+    id: 9,
+    type: "Restaurant",
+    title: "Perkins American Food Co.",
+    location: "1401 Paris St, Greater Sudbury, ON P3E 3B6, Canada",
+    description: "Perkins American Food Co. is a family-friendly diner chain known for its all-day breakfast, classic American comfort food, and fresh-baked pies. With a cozy, casual atmosphere, it's a great spot for families, travelers, and anyone craving homestyle meals.",
+    cuisine: "American, Breakfast & Bakery",
+    priceRange: "$$",
+    hours: "7 AM – 10 PM daily",
+    capacity: "75 seats",
+    amenities: ["Kid-Friendly", "Bakery", "Takeout", "Wheelchair Accessible"],
+    image: "https://lh3.googleusercontent.com/p/AF1QipOcPWj_31KyXl_nLJPZTZjYkgBQIbi2yAR_DPGz=s1360-w1360-h1020",
+    specialties: ["Buttermilk Pancakes", "Turkey Dinner", "Fresh-Baked Pies"],
+    href: "https://www.perkinsrestaurants.com/locations/ca/on/sudbury/1401-paris-street/"
+  },
+  {
+    id: 10,
+    type: "Restaurant",
+    title: "Shoeless Joe's Sports Grill",
+    location: "591 Wellington Rd S, London, ON N6C 4R3, Canada",
+    description: "Shoeless Joe's Sports Grill is a lively, sports-themed restaurant and bar offering a wide selection of pub fare, gourmet burgers, and signature cocktails. With big-screen TVs, energetic vibes, and a menu designed for game day and gatherings, it's the perfect spot for sports fans and casual diners alike.",
+    cuisine: "Sports Bar & Grill",
+    priceRange: "$$",
+    hours: "11 AM – 12 AM daily",
+    capacity: "100 seats",
+    amenities: ["Big Screen TVs", "Cocktail Bar", "Patio Seating", "Live Sports"],
+    image: "https://shoelessjoes.ca/wp-content/uploads/2023/02/0207-SJ-NEW-LOCATION-WEB-BANNER-1920X1000.jpg",
+    specialties: ["Gourmet Burgers", "Wings", "Signature Cocktails"],
+    href: "https://shoelessjoes.ca/"
+  }
+];
+
+//   ];
+
        // Initialize the portfolio page
        populatePortfolio();
        
@@ -659,13 +819,16 @@
            if (priceRange === "$$") return "midrange";
            return "budget";
          }
-         
+         // Determine if property is hotel or restaurant
+         function getTypeClass(property) {
+  return property.type.toLowerCase() === 'hotel' ? 'hotel' : 'restaurant';
+}
          // Generate HTML for each property
          restaurants.forEach(property => {
            const priceClass = getPriceClass(property.priceRange);
-           
+           const typeClass = getTypeClass(property);
            const itemHtml = `
-  <div class="portfolio-item ${priceClass} wow animate__animated animate__fadeInUp" data-wow-delay=".2s">
+  <div class="portfolio-item ${priceClass} ${typeClass} wow animate__animated animate__fadeInUp" data-wow-delay=".2s">
     <div class="restaurant-card">
       <div class="restaurant-img">
         <img src="${property.image}" alt="${property.title}" />
@@ -681,7 +844,6 @@
     </div>
   </div>
 `;
-           
            portfolioBox.append(itemHtml);
          });
          
@@ -1048,13 +1210,13 @@
    }
 
    .btn.tj-btn-primary {
-      background: #007bff;
+      background: #7000ff;
       color: white;
       border: none;
    }
 
    .btn.tj-btn-primary:hover {
-      background: #0056b3;
+      background: #5a00d4;
       transform: translateY(-1px);
    }
 
@@ -1211,7 +1373,7 @@
    }
    </style>
 
-   <script>
+   <!-- <script>
    // Update the portfolio items class names
    $(document).ready(function() {
       // Update existing items to use new classes
@@ -1228,6 +1390,37 @@
          }
       });
      });
+   </script> -->
+
+   <script>
+   // Update the .view-btn button styles
+   $(document).ready(function() {
+      $('.view-btn').each(function() {
+         // Remove existing styles
+         $(this).removeClass('view-btn');
+         
+         // Add new styles
+         $(this).addClass('view-btn');
+         $(this).css('background', 'linear-gradient(90deg, #a084ff 0%, #7000ff 100%)');
+         $(this).css('color', '#fff');
+         $(this).css('border', 'none');
+         $(this).css('border-radius', '24px');
+         $(this).css('padding', '10px 28px');
+         $(this).css('font-size', '18px');
+         $(this).css('font-weight', '500');
+         $(this).css('cursor', 'pointer');
+         $(this).css('transition', 'background 0.2s, transform 0.2s');
+         $(this).css('display', 'inline-flex');
+         $(this).css('align-items', 'center');
+         $(this).css('gap', '8px');
+      });
+      
+      $('.view-btn').hover(function() {
+         $(this).css('background', 'linear-gradient(90deg, #bca7ff 0%, #5a00d4 100%)');
+         $(this).css('color', '#fff');
+         $(this).css('transform', 'translateY(-2px) scale(1.03)');
+      });
+   });
    </script>
 
 </body>

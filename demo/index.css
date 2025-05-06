@@ -1,0 +1,13 @@
+.img-logo {
+    height: 100px;    /* or try 120px for a larger effect */
+    width: auto;      /* maintains original aspect ratio */
+    object-fit: contain;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .logo-box {
+    padding: 10px 0;  /* optional vertical spacing */
+    display: flex;
+    align-items: center;
+  }
+ /* 
