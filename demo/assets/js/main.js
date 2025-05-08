@@ -1513,4 +1513,60 @@ const restaurants = [
 			stagger: 0.1,
 		});
 	});
+
+	/*--------------------------------------------------------------
+	# Portfolio Modal Enhancement
+	--------------------------------------------------------------*/
+	$('.portfolio-item').on('click', function() {
+		// Add loading animation
+		$('body').addClass('loading-popup');
+		
+		// Ensure images are loaded before showing popup
+		$(this).find('img').on('load', function() {
+			$('body').removeClass('loading-popup');
+		});
+	});
+
+	// Add subtle hover effects to popup images
+	$(document).on('click', '.portfolio-item', function() {
+		setTimeout(function() {
+			$('.modal-image img').mousemove(function(e) {
+				const $this = $(this);
+				const offset = $this.offset();
+				const relX = e.pageX - offset.left;
+				const relY = e.pageY - offset.top;
+				const width = $this.width();
+				const height = $this.height();
+				
+				const moveX = (relX - width/2) / width * 10;
+				const moveY = (relY - height/2) / height * 10;
+				
+				$this.css({
+					'transform': `translate(${moveX}px, ${moveY}px) scale(1.05)`
+				});
+			});
+			
+			// Reset transform when mouse leaves
+			$('.modal-image img').mouseleave(function() {
+				$(this).css({
+					'transform': 'translate(0, 0) scale(1)'
+				});
+			});
+		}, 500);
+	});
+
+	// Enhanced tab switching for services section
+	$('.tab-btn').on('click', function() {
+		const tabId = $(this).data('tab');
+		
+		// Remove active class from all buttons and add to current
+		$('.tab-btn').removeClass('active');
+		$(this).addClass('active');
+		
+		// Hide all tab panes
+		$('.tab-pane').removeClass('active');
+		
+		// Show the corresponding tab pane with animation
+		$(`#${tabId}-services`).addClass('active');
+	});
 })(jQuery);

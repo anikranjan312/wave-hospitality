@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html class="no-js" lang="en">
+
 <head>
    <meta charset="utf-8">
    <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -33,106 +34,858 @@
    <link rel="stylesheet" href="assets/css/responsive-2.css">
    <link rel="stylesheet" href="assets/css/responsive-3.css">
    <style>
+      body {
+         font-family: 'Poppins', sans-serif;
+         color: #fff;
+         overflow-x: hidden;
+      }
+
       .hero-banner {
-         background: url('assets/img/about/hero-bg.jpg') no-repeat center center;
+         background: linear-gradient(to bottom, rgba(20, 0, 50, 0.7), rgba(60, 10, 100, 0.8)), url('assets/img/about/hero-bg.jpg') no-repeat center center;
          background-size: cover;
          padding: 150px 0;
          text-align: center;
          color: #fff;
+         position: relative;
       }
+
+      .hero-banner:before {
+         content: '';
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         background: url('assets/img/bg/pattern-bg.png') repeat;
+         opacity: 0.05;
+         pointer-events: none;
+      }
+
+      .hero-banner h1 {
+         font-weight: 800;
+         margin-bottom: 15px;
+         font-size: 3.5rem;
+         text-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+         background: linear-gradient(90deg, #ffffff 0%, #e0d7ff 100%);
+         -webkit-background-clip: text;
+         -webkit-text-fill-color: transparent;
+         background-clip: text;
+         text-fill-color: transparent;
+      }
+
+      .hero-subtitle {
+         max-width: 800px;
+         margin: 0 auto;
+         font-size: 1.2rem;
+         line-height: 1.8;
+         font-weight: 500;
+         color: rgba(255, 255, 255, 0.9);
+      }
+
       .red-line {
-         width: 100px;
-         height: 2px;
-         background: #ff0000;
-         margin: 20px auto;
+         background: linear-gradient(90deg, #a084ff 0%, #7000ff 100%);
+         height: 4px;
+         width: 80px;
+         margin: 15px auto 30px;
+         border-radius: 2px;
+         box-shadow: 0 5px 15px rgba(112, 0, 255, 0.2);
       }
+
       .dark-section {
-         background: #1a1a1a;
+         background: linear-gradient(to bottom, #1a1a1a, #12121f);
          color: #fff;
          padding: 80px 0;
+         position: relative;
+         overflow: hidden;
       }
+
+      .dark-section::before {
+         content: '';
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         background: url('assets/img/bg/pattern-bg.png') repeat;
+         opacity: 0.02;
+         pointer-events: none;
+      }
+
+      .container {
+         width: 100%;
+         max-width: 1200px;
+         margin: 0 auto;
+         padding: 0 15px;
+      }
+
+      .about-section h2 {
+         color: #fff;
+         position: relative;
+         padding-bottom: 15px;
+         margin-bottom: 30px;
+         font-size: 2.5rem;
+         font-weight: 700;
+      }
+
+      .about-section h2:after {
+         content: '';
+         position: absolute;
+         bottom: 0;
+         left: 0;
+         width: 60px;
+         height: 3px;
+         background: linear-gradient(90deg, #a084ff 0%, #7000ff 100%);
+         border-radius: 2px;
+      }
+
+      .lead-text {
+         font-size: 1.2rem;
+         line-height: 1.8;
+         margin-bottom: 30px;
+         color: rgba(255, 255, 255, 0.9);
+      }
+
+      .values-section,
+      .milestones-section,
+      .achievements-section,
+      .why-choose-section {
+         margin-top: 80px;
+      }
+
       .values-grid {
          display: grid;
          grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
          gap: 30px;
          margin-top: 40px;
       }
+
       .value-item {
          text-align: center;
-         padding: 30px;
-         background: #2a2a2a;
-         border-radius: 10px;
+         padding: 40px;
+         background: rgba(255, 255, 255, 0.05);
+         border-radius: 20px;
+         transition: all 0.3s ease;
+         border: 1px solid rgba(160, 132, 255, 0.1);
+         position: relative;
+         overflow: hidden;
       }
+
+      .value-item::before {
+         content: '';
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         background: linear-gradient(135deg, rgba(160, 132, 255, 0.1) 0%, rgba(112, 0, 255, 0.05) 100%);
+         opacity: 0;
+         transition: opacity 0.3s ease;
+         z-index: 0;
+      }
+
+      .value-item:hover {
+         transform: translateY(-10px);
+         box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+         border-color: rgba(160, 132, 255, 0.3);
+      }
+
+      .value-item:hover::before {
+         opacity: 1;
+      }
+
+      .value-item>* {
+         position: relative;
+         z-index: 1;
+      }
+
       .value-icon {
          font-size: 40px;
-         color: #ff0000;
+         color: #a084ff;
          margin-bottom: 20px;
+         transition: all 0.3s ease;
       }
+
+      .value-item:hover .value-icon {
+         transform: scale(1.1);
+         color: #7000ff;
+      }
+
+      .value-item h3 {
+         font-size: 22px;
+         font-weight: 700;
+         margin-bottom: 15px;
+         transition: all 0.3s ease;
+      }
+
+      .value-item:hover h3 {
+         background: linear-gradient(90deg, #a084ff 0%, #7000ff 100%);
+         -webkit-background-clip: text;
+         -webkit-text-fill-color: transparent;
+         background-clip: text;
+         text-fill-color: transparent;
+      }
+
       .milestones-grid {
          display: grid;
          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
          gap: 30px;
          margin-top: 40px;
       }
+
       .milestone-item {
-         padding: 20px;
-         background: #2a2a2a;
-         border-radius: 10px;
+         padding: 30px;
+         background: rgba(255, 255, 255, 0.05);
+         border-radius: 20px;
+         transition: all 0.3s ease;
+         border: 1px solid rgba(160, 132, 255, 0.1);
+         position: relative;
+         overflow: hidden;
       }
+
+      .milestone-item::before {
+         content: '';
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         background: linear-gradient(135deg, rgba(160, 132, 255, 0.1) 0%, rgba(112, 0, 255, 0.05) 100%);
+         opacity: 0;
+         transition: opacity 0.3s ease;
+         z-index: 0;
+      }
+
+      .milestone-item:hover {
+         transform: translateY(-10px);
+         box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+         border-color: rgba(160, 132, 255, 0.3);
+      }
+
+      .milestone-item:hover::before {
+         opacity: 1;
+      }
+
+      .milestone-item>* {
+         position: relative;
+         z-index: 1;
+      }
+
       .milestone-year {
          font-size: 24px;
-         color: #ff0000;
-         margin-bottom: 10px;
+         font-weight: 700;
+         color: #a084ff;
+         margin-bottom: 15px;
+         transition: all 0.3s ease;
       }
+
+      .milestone-item:hover .milestone-year {
+         color: #7000ff;
+      }
+
       .achievements-grid {
          display: grid;
          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
          gap: 30px;
          margin-top: 40px;
       }
+
       .achievement-item {
          display: flex;
          align-items: flex-start;
-         padding: 20px;
-         background: #2a2a2a;
-         border-radius: 10px;
-      }
-      .achievement-icon {
-         font-size: 30px;
-         color: #ff0000;
-         margin-right: 20px;
-      }
-      .team-grid {
-         display: grid;
-         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-         gap: 30px;
-         margin-top: 40px;
-      }
-      .team-member {
-         background: #2a2a2a;
-         border-radius: 10px;
+         padding: 30px;
+         background: rgba(255, 255, 255, 0.05);
+         border-radius: 20px;
+         transition: all 0.3s ease;
+         border: 1px solid rgba(160, 132, 255, 0.1);
+         position: relative;
          overflow: hidden;
       }
-      .member-image {
-         height: 300px;
-         background-size: cover;
-         background-position: center;
+
+      .achievement-item::before {
+         content: '';
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         background: linear-gradient(135deg, rgba(160, 132, 255, 0.1) 0%, rgba(112, 0, 255, 0.05) 100%);
+         opacity: 0;
+         transition: opacity 0.3s ease;
+         z-index: 0;
       }
-      .member-image.sarah {
-         background-image: url('assets/img/team/sarah.jpg');
+
+      .achievement-item:hover {
+         transform: translateY(-10px);
+         box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+         border-color: rgba(160, 132, 255, 0.3);
       }
-      .member-image.michael {
-         background-image: url('assets/img/team/michael.jpg');
+
+      .achievement-item:hover::before {
+         opacity: 1;
       }
-      .member-image.emily {
-         background-image: url('assets/img/team/emily.jpg');
+
+      .achievement-item>* {
+         position: relative;
+         z-index: 1;
       }
-      .member-info {
-         padding: 20px;
+
+      .achievement-icon {
+         font-size: 30px;
+         color: #a084ff;
+         margin-right: 20px;
+         transition: all 0.3s ease;
       }
-      .position {
-         color: #ff0000;
-         margin: 10px 0;
+
+      .achievement-item:hover .achievement-icon {
+         transform: scale(1.1);
+         color: #7000ff;
+      }
+
+      .why-choose-grid {
+         display: grid;
+         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+         gap: 25px;
+      }
+
+      .why-choose-item {
+         background: rgba(255, 255, 255, 0.05);
+         border-radius: 20px;
+         padding: 25px;
+         display: flex;
+         align-items: flex-start;
+         gap: 15px;
+         transition: all 0.3s ease;
+         border: 1px solid rgba(160, 132, 255, 0.1);
+         position: relative;
+         overflow: hidden;
+      }
+
+      .why-choose-item::before {
+         content: '';
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         background: linear-gradient(135deg, rgba(160, 132, 255, 0.1) 0%, rgba(112, 0, 255, 0.05) 100%);
+         opacity: 0;
+         transition: opacity 0.3s ease;
+         z-index: 0;
+      }
+
+      .why-choose-item:hover {
+         transform: translateY(-10px);
+         box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+         border-color: rgba(160, 132, 255, 0.3);
+      }
+
+      .why-choose-item:hover::before {
+         opacity: 1;
+      }
+
+      .why-choose-item>* {
+         position: relative;
+         z-index: 1;
+      }
+
+      .why-choose-icon {
+         width: 60px;
+         height: 60px;
+         background: linear-gradient(90deg, #a084ff 0%, #7000ff 100%);
+         border-radius: 16px;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         font-size: 24px;
+         color: #fff;
+         flex-shrink: 0;
+         transition: all 0.3s ease;
+         box-shadow: 0 5px 15px rgba(112, 0, 255, 0.25);
+      }
+
+      .why-choose-item:hover .why-choose-icon {
+         transform: rotate(10deg) scale(1.1);
+      }
+
+      .why-choose-content h3 {
+         font-size: 20px;
+         margin-bottom: 8px;
+         font-weight: 700;
+         transition: all 0.3s ease;
+      }
+
+      .why-choose-item:hover .why-choose-content h3 {
+         background: linear-gradient(90deg, #a084ff 0%, #7000ff 100%);
+         -webkit-background-clip: text;
+         -webkit-text-fill-color: transparent;
+         background-clip: text;
+         text-fill-color: transparent;
+      }
+
+      .why-choose-content p {
+         margin: 0;
+         font-size: 16px;
+         color: rgba(255, 255, 255, 0.8);
+      }
+
+      .enhanced-cta-section {
+         padding: 80px 0 100px 0;
+         background: linear-gradient(to bottom, rgba(20, 0, 50, 0.0), rgba(20, 0, 50, 0.3));
+         position: relative;
+      }
+
+      .enhanced-cta-section::before {
+         content: '';
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         background: url('assets/img/bg/pattern-bg.png') repeat;
+         opacity: 0.02;
+         pointer-events: none;
+      }
+
+      .cta-card.glass-card {
+         background: rgba(40, 0, 80, 0.18);
+         border-radius: 36px;
+         box-shadow: 0 8px 40px 0 rgba(112, 0, 255, 0.18);
+         backdrop-filter: blur(16px);
+         -webkit-backdrop-filter: blur(16px);
+         border: 2px solid transparent;
+         border-image: linear-gradient(90deg, #a084ff 0%, #7000ff 100%);
+         border-image-slice: 1;
+         padding: 60px 40px 50px 40px;
+         max-width: 800px;
+         margin: 0 auto;
+         text-align: center;
+         position: relative;
+         overflow: hidden;
+         transition: box-shadow 0.3s, transform 0.3s;
+      }
+
+      .cta-inner {
+         position: relative;
+         z-index: 2;
+      }
+
+      .cta-glow {
+         position: absolute;
+         inset: -2px;
+         border-radius: 40px;
+         background: linear-gradient(120deg, #a084ff 0%, #7000ff 100%);
+         opacity: 0.18;
+         z-index: 0;
+         pointer-events: none;
+         filter: blur(30px);
+         animation: ctaGlow 5s ease-in-out infinite alternate;
+      }
+
+      @keyframes ctaGlow {
+         0% {
+            opacity: 0.12;
+            filter: blur(30px);
+            transform: scale(0.95);
+         }
+
+         100% {
+            opacity: 0.22;
+            filter: blur(40px);
+            transform: scale(1.05);
+         }
+      }
+
+      .cta-card.glass-card:hover {
+         box-shadow: 0 16px 64px 0 rgba(112, 0, 255, 0.28);
+         transform: translateY(-10px);
+      }
+
+      .cta-title.gradient-text {
+         font-size: 2.5rem;
+         font-weight: 900;
+         background: linear-gradient(90deg, #ffe8ff 0%, #a084ff 100%);
+         -webkit-background-clip: text;
+         -webkit-text-fill-color: transparent;
+         background-clip: text;
+         text-fill-color: transparent;
+         margin-bottom: 32px;
+         letter-spacing: 0.5px;
+      }
+
+      .cta-desc {
+         color: #fff;
+         font-size: 1.25rem;
+         font-weight: 500;
+         margin-bottom: 36px;
+         max-width: 650px;
+         margin-left: auto;
+         margin-right: auto;
+         line-height: 1.7;
+      }
+
+      .cta-btn {
+         display: inline-flex;
+         align-items: center;
+         gap: 10px;
+         padding: 16px 38px;
+         font-size: 1.1rem;
+         font-weight: 700;
+         border-radius: 50px;
+         background: linear-gradient(90deg, #a084ff 0%, #7000ff 100%);
+         color: #fff;
+         text-decoration: none;
+         box-shadow: 0 5px 20px 0 rgba(112, 0, 255, 0.3);
+         transition: all 0.3s ease;
+         position: relative;
+         z-index: 1;
+         overflow: hidden;
+      }
+
+      .cta-btn::before {
+         content: '';
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         background: linear-gradient(90deg, #bca7ff 0%, #5a00d4 100%);
+         z-index: -1;
+         opacity: 0;
+         transition: opacity 0.3s ease;
+      }
+
+      .cta-btn:hover {
+         color: #fff;
+         transform: translateY(-5px);
+         box-shadow: 0 8px 25px rgba(112, 0, 255, 0.4);
+      }
+
+      .cta-btn:hover::before {
+         opacity: 1;
+      }
+
+      .btn-icon {
+         display: inline-flex;
+         align-items: center;
+         justify-content: center;
+         transition: transform 0.3s ease;
+      }
+
+      .cta-btn:hover .btn-icon {
+         transform: translateX(5px);
+      }
+
+      /* Header Styles */
+      .tj-header-area {
+         transition: all 0.3s ease;
+      }
+
+      .tj-header-area.header-sticky.sticky {
+         background: rgba(26, 26, 31, 0.9);
+         backdrop-filter: blur(10px);
+         box-shadow: 0 5px 30px rgba(0, 0, 0, 0.2);
+      }
+
+      .header-menu ul li a {
+         color: #fff;
+         transition: color 0.3s ease;
+      }
+
+      .header-menu ul li a:hover,
+      .header-menu ul li.current-menu-item a {
+         color: #a084ff;
+      }
+
+      /* Footer Styles */
+      .tj-footer-area {
+         background: linear-gradient(to bottom, #1a1a1a, #12121f);
+         position: relative;
+         padding: 80px 0 40px;
+      }
+
+      .tj-footer-area::before {
+         content: '';
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         background: url('assets/img/bg/pattern-bg.png') repeat;
+         opacity: 0.02;
+         pointer-events: none;
+      }
+
+      .footer-menu ul li a {
+         color: rgba(255, 255, 255, 0.7);
+         transition: color 0.3s ease;
+      }
+
+      .footer-menu ul li a:hover {
+         color: #a084ff;
+      }
+
+      .footer-logo-box {
+         margin-bottom: 30px;
+      }
+
+      .social-icons {
+         margin-bottom: 30px;
+      }
+
+      .social-icons li a {
+         background: rgba(255, 255, 255, 0.05);
+         border-radius: 50%;
+         width: 40px;
+         height: 40px;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         color: #fff;
+         font-size: 16px;
+         transition: all 0.3s ease;
+         border: 1px solid rgba(160, 132, 255, 0.1);
+      }
+
+      .social-icons li a:hover {
+         background: linear-gradient(90deg, #a084ff 0%, #7000ff 100%);
+         color: #fff;
+         transform: translateY(-5px);
+         box-shadow: 0 8px 20px rgba(112, 0, 255, 0.3);
+      }
+
+      .copy-text p {
+         color: rgba(255, 255, 255, 0.5);
+         font-size: 14px;
+      }
+
+      .copy-text a {
+         color: #a084ff;
+         transition: color 0.3s ease;
+      }
+
+      .copy-text a:hover {
+         color: #7000ff;
+      }
+
+      /* Mobile Menu Styles */
+      .mean-container .mean-bar {
+         background: rgba(26, 26, 31, 0.95);
+         backdrop-filter: blur(10px);
+      }
+
+      .mean-container .mean-nav {
+         background: rgba(26, 26, 31, 0.95);
+         backdrop-filter: blur(10px);
+      }
+
+      .mean-container .mean-nav ul li a {
+         color: #fff;
+      }
+
+      .mean-container .mean-nav ul li a:hover {
+         background: rgba(160, 132, 255, 0.1);
+      }
+
+      .mean-container .mean-nav ul li a.mean-expand:hover {
+         background: rgba(160, 132, 255, 0.2);
+      }
+
+      /* Responsive Styles */
+      @media (max-width: 1199px) {
+         .container {
+            max-width: 960px;
+         }
+      }
+
+      @media (max-width: 991px) {
+         .container {
+            max-width: 720px;
+         }
+
+         .hero-banner {
+            padding: 120px 0;
+         }
+
+         .hero-banner h1 {
+            font-size: 3rem;
+         }
+
+         .hero-subtitle {
+            font-size: 1.1rem;
+         }
+
+         .values-section,
+         .milestones-section,
+         .achievements-section,
+         .why-choose-section {
+            margin-top: 60px;
+         }
+
+         .about-section h2 {
+            font-size: 2.2rem;
+         }
+
+         .values-grid,
+         .milestones-grid,
+         .achievements-grid {
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+         }
+      }
+
+      @media (max-width: 767px) {
+         .container {
+            max-width: 540px;
+         }
+
+         .hero-banner {
+            padding: 100px 0;
+         }
+
+         .hero-banner h1 {
+            font-size: 2.5rem;
+         }
+
+         .hero-subtitle {
+            font-size: 1rem;
+            line-height: 1.6;
+         }
+
+         .about-section h2 {
+            font-size: 2rem;
+            text-align: center;
+         }
+
+         .about-section h2:after {
+            left: 50%;
+            transform: translateX(-50%);
+         }
+
+         .lead-text {
+            font-size: 1.1rem;
+            text-align: center;
+         }
+
+         .values-section,
+         .milestones-section,
+         .achievements-section,
+         .why-choose-section {
+            margin-top: 50px;
+            text-align: center;
+         }
+
+         .value-item,
+         .milestone-item,
+         .achievement-item,
+         .why-choose-item {
+            padding: 25px 20px;
+         }
+
+         .achievement-item {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+         }
+
+         .achievement-icon {
+            margin-right: 0;
+            margin-bottom: 15px;
+         }
+
+         .why-choose-item {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+         }
+
+         .why-choose-icon {
+            margin-bottom: 15px;
+         }
+
+         .cta-card.glass-card {
+            padding: 40px 20px;
+            border-radius: 26px;
+         }
+
+         .cta-title.gradient-text {
+            font-size: 1.8rem;
+         }
+
+         .cta-desc {
+            font-size: 1rem;
+         }
+
+         .cta-btn {
+            padding: 14px 28px;
+            font-size: 1rem;
+         }
+      }
+
+      @media (max-width: 575px) {
+         .container {
+            max-width: 100%;
+            padding: 0 20px;
+         }
+
+         .hero-banner {
+            padding: 80px 0;
+         }
+
+         .hero-banner h1 {
+            font-size: 2rem;
+         }
+
+         .values-grid,
+         .milestones-grid,
+         .achievements-grid,
+         .why-choose-grid {
+            grid-template-columns: 1fr;
+            gap: 20px;
+         }
+
+         .value-item,
+         .milestone-item,
+         .achievement-item,
+         .why-choose-item {
+            padding: 20px 15px;
+         }
+
+         .value-icon,
+         .why-choose-icon {
+            font-size: 30px;
+            width: 50px;
+            height: 50px;
+         }
+
+         .value-item h3,
+         .milestone-item h3,
+         .achievement-item h3,
+         .why-choose-content h3 {
+            font-size: 18px;
+         }
+
+         .milestone-year {
+            font-size: 20px;
+         }
+
+         .values-grid,
+         .milestones-grid,
+         .achievements-grid,
+         .why-choose-grid {
+            margin-top: 25px;
+         }
+
+         .enhanced-cta-section {
+            padding: 60px 0 80px;
+         }
+
+         .cta-title.gradient-text {
+            font-size: 1.6rem;
+         }
+
+         .tj-footer-area {
+            padding: 60px 0 30px;
+         }
       }
    </style>
 </head>
@@ -159,584 +912,114 @@
 
    <!-- start: Header Area -->
    <header class="tj-header-area header-3 header-absolute">
-    <div class="container">
-       <div class="row">
-          <div class="col-12 d-flex flex-wrap justify-content-between align-items-center">
-             <div class="logo-box">
-                <a href="index.html">
-                   <img src="assets/img/logo/wave.png" alt="Logo" class="img-logo">
-                </a>
-             </div>
-             <div class="header-menu" id="headerMenu">
-                <nav>
-                   <ul>
-                      <!-- <li class="has-dropdown current-menu-ancestor">
-                         <a class="current-menu-item" href="index.html">Home</a>
-                         <ul class="sub-menu">
-                            <li class="has-dropdown current-menu-ancestor">
-                               <a href="index.html">Dark Mode</a>
-                                  <ul class="sub-menu">
-                                     <li>
-                                        <a href="index.html">Home One</a>
-                                     </li>
-                                     <li>
-                                        <a href="index-2.html">Home Two</a>
-                                     </li>
-                                     <li class="current-menu-item">
-                                        <a href="index.html">Home Three</a>
-                                     </li>
-                                     <li>
-                                        <a href="index-4.html">Home Four</a>
-                                     </li>
-                                     <li>
-                                        <a href="index-5.html">Home Five</a>
-                                     </li>
-                                     <li>
-                                        <a href="index-6.html">Home Six</a>
-                                     </li>
-                                     <li>
-                                        <a href="index-7.html">Home Seven</a>
-                                     </li>
-                                     <li>
-                                        <a href="index-8.html">Home Eight</a>
-                                     </li>
-                                     <li>
-                                        <a href="index-9.html">Home Nine</a>
-                                     </li>
-                                     <li>
-                                        <a href="index-10.html">Home Ten</a>
-                                     </li>
-                                  </ul>
-                            </li>
-                            <li class="has-dropdown">
-                               <a href="index-light.html">Light Mode</a>
-                               <ul class="sub-menu">
-                                     <li>
-                                        <a href="index-light.html">Home One</a>
-                                     </li>
-                                     <li>
-                                        <a href="index-2-light.html">Home Two</a>
-                                     </li>
-                                     <li>
-                                        <a href="index-3-light.html">Home Three</a>
-                                     </li>
-                                     <li>
-                                        <a href="index-4-light.html">Home Four</a>
-                                     </li>
-                                     <li>
-                                        <a href="index-5-light.html">Home Five</a>
-                                     </li>
-                                     <li>
-                                        <a href="index-6-light.html">Home Six</a>
-                                     </li>
-                                     <li>
-                                        <a href="index-7-light.html">Home Seven</a>
-                                     </li>
-                                     <li>
-                                        <a href="index-8-light.html">Home Eight</a>
-                                     </li>
-                                     <li>
-                                        <a href="index-9-light.html">Home Nine</a>
-                                     </li>
-                                     <li>
-                                        <a href="index-10-light.html">Home Ten</a>
-                                     </li>
-                               </ul>
-                            </li>
-                         </ul>
-                      </li> -->
-                      <li><a href="index.html">Home</a></li>
-                      <li><a href="about.html">About</a></li>
-                      <!-- <li><a href="services.html">Services</a></li> -->
-                      <li><a href="portfolio.html">Portfolios</a></li>
-                      <!-- <li class="has-dropdown">
-                          <a href="blog.html">Blog</a>
-                          <ul class="sub-menu">
-                              <li>
-                                  <a href="blog.html">Blog</a>
-                              </li>
-                              <li>
-                                  <a href="blog-details.html">Blog Details</a>
-                              </li>
-                          </ul>
-                      </li> -->
-                      <li><a href="contact.html">Contact</a></li>
-                   </ul>
-                </nav>
-             </div>
-             <div class="mobile-menu d-lg-none"></div>
-             <div class="header-media d-none d-lg-inline-flex">
-                <ul class="ul-reset social-icons">
-                   <li>
-                      <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                   </li>
-                   <li>
-                      <a href="#"><i class="fa-light fa-basketball"></i></a>
-                   </li>
-                   <li>
-                      <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-                   </li>
-                   <li>
-                      <a href="#"><i class="fa-brands fa-github"></i></a>
-                   </li>
-                </ul>
-             </div>
-             <div class="menu-bar d-lg-none">
-                <button>
-                   <span></span>
-                   <span></span>
-                   <span></span>
-                   <span></span>
-                </button>
-             </div>
-          </div>
-       </div>
-    </div>
- </header>
- <header class="tj-header-area header-2 header-3 header-sticky sticky-out">
-    <div class="container">
-       <div class="row">
-          <div class="col-12 d-flex flex-wrap justify-content-between align-items-center">
-             <div class="logo-box">
-                <a href="index.html">
-                   <img src="assets/img/logo/wave.png" alt="Logo" class="img-logo">
-                </a>
-             </div>
-             <div class="header-menu">
-                <nav>
-                   <ul>
-                      <!-- <li class="has-dropdown current-menu-ancestor">
-                         <a class="current-menu-item" href="index.html">Home</a>
-                         <ul class="sub-menu">
-                            <li class="has-dropdown current-menu-ancestor">
-                               <a href="index.html">Dark Mode</a>
-                                  <ul class="sub-menu">
-                                     <li>
-                                        <a href="index.html">Home One</a>
-                                     </li>
-                                     <li>
-                                        <a href="index-2.html">Home Two</a>
-                                     </li>
-                                     <li class="current-menu-item">
-                                        <a href="index.html">Home Three</a>
-                                     </li>
-                                     <li>
-                                        <a href="index-4.html">Home Four</a>
-                                     </li>
-                                     <li>
-                                        <a href="index-5.html">Home Five</a>
-                                     </li>
-                                     <li>
-                                        <a href="index-6.html">Home Six</a>
-                                     </li>
-                                     <li>
-                                        <a href="index-7.html">Home Seven</a>
-                                     </li>
-                                     <li>
-                                        <a href="index-8.html">Home Eight</a>
-                                     </li>
-                                     <li>
-                                        <a href="index-9.html">Home Nine</a>
-                                     </li>
-                                     <li>
-                                        <a href="index-10.html">Home Ten</a>
-                                     </li>
-                                  </ul>
-                            </li>
-                            <li class="has-dropdown">
-                               <a href="index-light.html">Light Mode</a>
-                               <ul class="sub-menu">
-                                     <li>
-                                        <a href="index-light.html">Home One</a>
-                                     </li>
-                                     <li>
-                                        <a href="index-2-light.html">Home Two</a>
-                                     </li>
-                                     <li>
-                                        <a href="index-3-light.html">Home Three</a>
-                                     </li>
-                                     <li>
-                                        <a href="index-4-light.html">Home Four</a>
-                                     </li>
-                                     <li>
-                                        <a href="index-5-light.html">Home Five</a>
-                                     </li>
-                                     <li>
-                                        <a href="index-6-light.html">Home Six</a>
-                                     </li>
-                                     <li>
-                                        <a href="index-7-light.html">Home Seven</a>
-                                     </li>
-                                     <li>
-                                        <a href="index-8-light.html">Home Eight</a>
-                                     </li>
-                                     <li>
-                                        <a href="index-9-light.html">Home Nine</a>
-                                     </li>
-                                     <li>
-                                        <a href="index-10-light.html">Home Ten</a>
-                                     </li>
-                               </ul>
-                            </li>
-                         </ul>
-                      </li> -->
-                      <li><a href="index.html">Home</a></li>
-                      <li><a href="about.html">About</a></li>
-                      <!-- <li><a href="services.html">Services</a></li> -->
-                      <li><a href="portfolio.html">Portfolios</a></li>
-                      <!-- <li class="has-dropdown">
-                          <a href="blog.html">Blog</a>
-                          <ul class="sub-menu">
-                              <li>
-                                  <a href="blog.html">Blog</a>
-                              </li>
-                              <li>
-                                  <a href="blog-details.html">Blog Details</a>
-                              </li>
-                          </ul>
-                      </li> -->
-                      <li><a href="contact.html">Contact</a></li>
-                   </ul>
-                </nav>
-             </div>
-             <div class="mobile-menu d-lg-none"></div>
-             <div class="header-media d-none d-lg-inline-flex">
-                <ul class="ul-reset social-icons">
-                   <li>
-                      <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                   </li>
-                   <li>
-                      <a href="#"><i class="fa-light fa-basketball"></i></a>
-                   </li>
-                   <li>
-                      <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-                   </li>
-                   <li>
-                      <a href="#"><i class="fa-brands fa-github"></i></a>
-                   </li>
-                </ul>
-             </div>
-             <div class="menu-bar d-lg-none">
-                <button>
-                   <span></span>
-                   <span></span>
-                   <span></span>
-                   <span></span>
-                </button>
-             </div>
-          </div>
-       </div>
-    </div>
- </header>
- <!-- end: Header Area -->
-
-   <main class="site-content" id="content">
-      <!-- Hero Banner -->
-      <section class="hero-banner">
-         <h1>WHO WE ARE</h1>
-         <div class="red-line"></div>
-         <p class="hero-subtitle">Wave Hospitality Group is a family-owned and operated company 
-            with over a decade of experience in managing hotels and restaurants. 
-            Our diverse portfolio spans top hotel brands and a growing number of successful food & beverage ventures.
-             We combine operational expertise with a personal touch, ensuring every property—hospitality or restaurant—delivers
-              quality, comfort, and consistency.
-         </p>
-      </section>
-
-      <!-- About Content -->
-      <section class="about-content dark-section">
-         <div class="container">
-            <!-- Our Story -->
-            <div class="about-section">
-               <h2>Our Story</h2>
-               <p class="lead-text">
-                  Founded in 2010, Canadian Maple Lodge has become synonymous with luxury hospitality in Canada. 
-                  Our journey began with a vision to create an extraordinary retreat that seamlessly blends Canadian 
-                  natural beauty with world-class luxury. Today, we stand as a testament to excellence, 
-                  having hosted distinguished guests from around the globe and earning numerous accolades 
-                  for our exceptional service and commitment to sustainability.
-               </p>
-            </div>
-
-            <!-- Core Values -->
-            <div class="values-section">
-               <h2>Our Core Values</h2>
-               <div class="values-grid">
-                  <div class="value-item">
-                     <div class="value-icon">
-                        <i class="fa-solid fa-star"></i>
-                     </div>
-                     <h3>Excellence</h3>
-                     <div class="red-line"></div>
-                     <p>We strive for perfection in every detail of our service, ensuring each guest experiences 
-                     the highest standards of luxury hospitality.</p>
-                  </div>
-                  <div class="value-item">
-                     <div class="value-icon">
-                        <i class="fa-solid fa-leaf"></i>
-                     </div>
-                     <h3>Sustainability</h3>
-                     <div class="red-line"></div>
-                     <p>Committed to preserving Canada's natural beauty through eco-friendly practices and 
-                     sustainable luxury initiatives.</p>
-                  </div>
-                  <div class="value-item">
-                     <div class="value-icon">
-                        <i class="fa-solid fa-lightbulb"></i>
-                     </div>
-                     <h3>Innovation</h3>
-                     <div class="red-line"></div>
-                     <p>Continuously evolving and implementing cutting-edge technologies to enhance guest 
-                     experiences and exceed modern luxury standards.</p>
-                  </div>
-                  <div class="value-item">
-                     <div class="value-icon">
-                        <i class="fa-solid fa-handshake"></i>
-                     </div>
-                     <h3>Community</h3>
-                     <div class="red-line"></div>
-                     <p>Supporting local communities, celebrating Canadian culture, and creating meaningful 
-                     connections with our guests and partners.</p>
-                  </div>
-               </div>
-            </div>
-
-            <!-- Milestones -->
-            <div class="milestones-section">
-               <h2>Our Journey</h2>
-               <div class="milestones-grid">
-                  <div class="milestone-item">
-                     <div class="milestone-year">2010</div>
-                     <h3>Foundation</h3>
-                     <p>Canadian Maple Lodge opens its doors in the heart of the Canadian wilderness</p>
-                  </div>
-                  <div class="milestone-item">
-                     <div class="milestone-year">2013</div>
-                     <h3>First Expansion</h3>
-                     <p>Addition of luxury spa and wellness center</p>
-                  </div>
-                  <div class="milestone-item">
-                     <div class="milestone-year">2016</div>
-                     <h3>Sustainability Initiative</h3>
-                     <p>Launched comprehensive environmental program</p>
-                  </div>
-                  <div class="milestone-item">
-                     <div class="milestone-year">2018</div>
-                     <h3>International Recognition</h3>
-                     <p>First Forbes Five-Star Rating received</p>
-                  </div>
-                  <div class="milestone-item">
-                     <div class="milestone-year">2020</div>
-                     <h3>Digital Innovation</h3>
-                     <p>Introduction of smart room technology</p>
-                  </div>
-                  <div class="milestone-item">
-                     <div class="milestone-year">2023</div>
-                     <h3>Complete Renovation</h3>
-                     <p>Major property enhancement and expansion</p>
-                  </div>
-               </div>
-            </div>
-
-            <!-- Achievements -->
-            <div class="achievements-section">
-               <h2>Recognition & Awards</h2>
-               <div class="achievements-grid">
-                  <div class="achievement-item">
-                     <div class="achievement-icon">
-                        <i class="fa-solid fa-trophy"></i>
-                     </div>
-                     <div class="achievement-content">
-                        <div class="achievement-year">2023</div>
-                        <h3>Best Luxury Hotel in Canada</h3>
-                        <p class="organization">World Travel Awards</p>
-                        <p>Recognized for exceptional luxury service and amenities</p>
-                     </div>
-                  </div>
-                  <div class="achievement-item">
-                     <div class="achievement-icon">
-                        <i class="fa-solid fa-medal"></i>
-                     </div>
-                     <div class="achievement-content">
-                        <div class="achievement-year">2022</div>
-                        <h3>Five-Star Rating</h3>
-                        <p class="organization">Forbes Travel Guide</p>
-                        <p>Maintained our five-star rating for the 5th consecutive year</p>
-                     </div>
-                  </div>
-                  <div class="achievement-item">
-                     <div class="achievement-icon">
-                        <i class="fa-solid fa-award"></i>
-                     </div>
-                     <div class="achievement-content">
-                        <div class="achievement-year">2021</div>
-                        <h3>Sustainability Excellence</h3>
-                        <p class="organization">Green Hotel Awards</p>
-                        <p>Leading the way in sustainable luxury hospitality</p>
-                     </div>
-                  </div>
-                  <div class="achievement-item">
-                     <div class="achievement-icon">
-                        <i class="fa-solid fa-heart"></i>
-                     </div>
-                     <div class="achievement-content">
-                        <div class="achievement-year">2020</div>
-                        <h3>Best Guest Experience</h3>
-                        <p class="organization">Luxury Travel Guide</p>
-                        <p>Awarded for outstanding guest satisfaction and service</p>
-                     </div>
-                  </div>
-               </div>
-            </div>
-
-            <!-- Leadership Team -->
-            <div class="team-section">
-               <h2>Leadership Team</h2>
-               <div class="team-grid">
-                  <div class="team-member">
-                     <div class="member-image sarah"></div>
-                     <div class="member-info">
-                        <h3>Sarah Thompson</h3>
-                        <p class="position">Chief Executive Officer</p>
-                        <div class="red-line"></div>
-                        <p class="description">With over 20 years of luxury hospitality experience, Sarah leads 
-                        our vision of creating extraordinary experiences and setting new standards in the industry.</p>
-                     </div>
-                  </div>
-                  <div class="team-member">
-                     <div class="member-image michael"></div>
-                     <div class="member-info">
-                        <h3>Michael Chen</h3>
-                        <p class="position">Operations Director</p>
-                        <div class="red-line"></div>
-                        <p class="description">A hospitality veteran ensuring operational excellence and 
-                        innovation in every aspect of our guest experience.</p>
-                     </div>
-                  </div>
-                  <div class="team-member">
-                     <div class="member-image emily"></div>
-                     <div class="member-info">
-                        <h3>Emily Laurent</h3>
-                        <p class="position">Hospitality Manager</p>
-                        <div class="red-line"></div>
-                        <p class="description">Emily's passion for creating memorable experiences drives our 
-                        team to deliver personalized service that exceeds expectations.</p>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </section>
-
-      <!-- Call to Action: Let's Build Something Great Together -->
-      <section class="cta-section enhanced-cta-section">
-        <div class="container">
-          <div class="cta-card glass-card wow fadeInUp" data-wow-delay=".2s">
-            <h2 class="cta-title gradient-text">Let's Build Something Great Together</h2>
-            <p class="cta-desc">
-              Looking for experienced operators to manage your hospitality or restaurant asset? Whether it's a franchise, independent concept, or tenant-managed space, <b>Wave Hospitality Group</b> is your trusted partner.
-            </p>
-            <a href="contact.html" class="cta-btn">Contact Us</a>
-          </div>
-        </div>
-        <style>
-        .enhanced-cta-section {
-          padding: 80px 0 80px 0;
-          background: none;
-        }
-        .cta-card.glass-card {
-          background: rgba(40, 0, 80, 0.18);
-          border-radius: 36px;
-          box-shadow: 0 8px 40px 0 rgba(112,0,255,0.18);
-          backdrop-filter: blur(16px);
-          -webkit-backdrop-filter: blur(16px);
-          border: 2px solid transparent;
-          border-image: linear-gradient(90deg, #a084ff 0%, #7000ff 100%);
-          border-image-slice: 1;
-          padding: 56px 40px 40px 40px;
-          max-width: 800px;
-          margin: 0 auto;
-          text-align: center;
-          position: relative;
-          overflow: hidden;
-          transition: box-shadow 0.3s, transform 0.3s;
-        }
-        .cta-card.glass-card::before {
-          content: '';
-          position: absolute;
-          inset: -2px;
-          border-radius: 40px;
-          background: linear-gradient(120deg, #a084ff 0%, #7000ff 100%);
-          opacity: 0.18;
-          z-index: 0;
-          pointer-events: none;
-          filter: blur(8px);
-          animation: gradientGlow 3s linear infinite alternate;
-        }
-        @keyframes gradientGlow {
-          0% { opacity: 0.12; filter: blur(8px); }
-          100% { opacity: 0.22; filter: blur(16px); }
-        }
-        .cta-card.glass-card:hover {
-          box-shadow: 0 16px 64px 0 rgba(112,0,255,0.28);
-          transform: scale(1.015);
-        }
-        .cta-title.gradient-text {
-          font-size: 2.5rem;
-          font-weight: 900;
-          background: linear-gradient(90deg, #a084ff 0%, #7000ff 100%);
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-          background-clip: text;
-          text-fill-color: transparent;
-          margin-bottom: 32px;
-        }
-        .cta-desc {
-          color: #fff;
-          font-size: 1.25rem;
-          font-weight: 500;
-          margin-bottom: 36px;
-        }
-        .cta-btn {
-          display: inline-block;
-          padding: 14px 36px;
-          font-size: 1.1rem;
-          font-weight: 700;
-          border-radius: 28px;
-          background: linear-gradient(90deg, #a084ff 0%, #7000ff 100%);
-          color: #fff;
-          text-decoration: none;
-          box-shadow: 0 2px 12px 0 rgba(112,0,255,0.10);
-          transition: background 0.2s, transform 0.2s;
-          position: relative;
-          z-index: 1;
-        }
-        .cta-btn:hover {
-          background: linear-gradient(90deg, #bca7ff 0%, #5a00d4 100%);
-          color: #fff;
-          transform: translateY(-2px) scale(1.03);
-        }
-        @media (max-width: 900px) {
-          .cta-card.glass-card {
-            padding: 32px 10px 20px 10px;
-          }
-          .cta-title.gradient-text {
-            font-size: 1.5rem;
-          }
-          .cta-desc {
-            font-size: 1rem;
-          }
-        }
-        </style>
-      </section>
-   </main>
-
-   <!-- FOOTER AREA START -->
-   <footer class="tj-footer-area style-3">
       <div class="container">
          <div class="row">
-            <div class="col-md-12 text-center">
-               <div class="header-media text-center">
+            <div class="col-12 d-flex flex-wrap justify-content-between align-items-center">
+               <div class="logo-box">
+                  <a href="index.html">
+                     <img src="assets/img/logo/wave.png" alt="Logo" class="img-logo">
+                  </a>
+               </div>
+               <div class="header-menu" id="headerMenu">
+                  <nav>
+                     <ul>
+                        <!-- <li class="has-dropdown current-menu-ancestor">
+                         <a class="current-menu-item" href="index.html">Home</a>
+                         <ul class="sub-menu">
+                            <li class="has-dropdown current-menu-ancestor">
+                               <a href="index.html">Dark Mode</a>
+                                  <ul class="sub-menu">
+                                     <li>
+                                        <a href="index.html">Home One</a>
+                                     </li>
+                                     <li>
+                                        <a href="index-2.html">Home Two</a>
+                                     </li>
+                                     <li class="current-menu-item">
+                                        <a href="index.html">Home Three</a>
+                                     </li>
+                                     <li>
+                                        <a href="index-4.html">Home Four</a>
+                                     </li>
+                                     <li>
+                                        <a href="index-5.html">Home Five</a>
+                                     </li>
+                                     <li>
+                                        <a href="index-6.html">Home Six</a>
+                                     </li>
+                                     <li>
+                                        <a href="index-7.html">Home Seven</a>
+                                     </li>
+                                     <li>
+                                        <a href="index-8.html">Home Eight</a>
+                                     </li>
+                                     <li>
+                                        <a href="index-9.html">Home Nine</a>
+                                     </li>
+                                     <li>
+                                        <a href="index-10.html">Home Ten</a>
+                                     </li>
+                                  </ul>
+                            </li>
+                            <li class="has-dropdown">
+                               <a href="index-light.html">Light Mode</a>
+                               <ul class="sub-menu">
+                                     <li>
+                                        <a href="index-light.html">Home One</a>
+                                     </li>
+                                     <li>
+                                        <a href="index-2-light.html">Home Two</a>
+                                     </li>
+                                     <li>
+                                        <a href="index-3-light.html">Home Three</a>
+                                     </li>
+                                     <li>
+                                        <a href="index-4-light.html">Home Four</a>
+                                     </li>
+                                     <li>
+                                        <a href="index-5-light.html">Home Five</a>
+                                     </li>
+                                     <li>
+                                        <a href="index-6-light.html">Home Six</a>
+                                     </li>
+                                     <li>
+                                        <a href="index-7-light.html">Home Seven</a>
+                                     </li>
+                                     <li>
+                                        <a href="index-8-light.html">Home Eight</a>
+                                     </li>
+                                     <li>
+                                        <a href="index-9-light.html">Home Nine</a>
+                                     </li>
+                                     <li>
+                                        <a href="index-10-light.html">Home Ten</a>
+                                     </li>
+                               </ul>
+                            </li>
+                         </ul>
+                      </li> -->
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <!-- <li><a href="services.html">Services</a></li> -->
+                        <li><a href="portfolio.html">Portfolios</a></li>
+                        <li><a href="service.html">Services</a></li>
+                        <!-- <li class="has-dropdown">
+                          <a href="blog.html">Blog</a>
+                          <ul class="sub-menu">
+                              <li>
+                                  <a href="blog.html">Blog</a>
+                              </li>
+                              <li>
+                                  <a href="blog-details.html">Blog Details</a>
+                              </li>
+                          </ul>
+                      </li> -->
+                        <li><a href="contact.html">Contact</a></li>
+                     </ul>
+                  </nav>
+               </div>
+               <div class="mobile-menu d-lg-none"></div>
+               <div class="header-media d-none d-lg-inline-flex">
                   <ul class="ul-reset social-icons">
                      <li>
                         <a href="#"><i class="fa-brands fa-twitter"></i></a>
@@ -752,21 +1035,407 @@
                      </li>
                   </ul>
                </div>
+               <div class="menu-bar d-lg-none">
+                  <button>
+                     <span></span>
+                     <span></span>
+                     <span></span>
+                     <span></span>
+                  </button>
+               </div>
+            </div>
+         </div>
+      </div>
+   </header>
+   <header class="tj-header-area header-2 header-3 header-sticky sticky-out">
+      <div class="container">
+         <div class="row">
+            <div class="col-12 d-flex flex-wrap justify-content-between align-items-center">
+               <div class="logo-box">
+                  <a href="index.html">
+                     <img src="assets/img/logo/wave.png" alt="Logo" class="img-logo">
+                  </a>
+               </div>
+               <div class="header-menu">
+                  <nav>
+                     <ul>
+                        <!-- <li class="has-dropdown current-menu-ancestor">
+                         <a class="current-menu-item" href="index.html">Home</a>
+                         <ul class="sub-menu">
+                            <li class="has-dropdown current-menu-ancestor">
+                               <a href="index.html">Dark Mode</a>
+                                  <ul class="sub-menu">
+                                     <li>
+                                        <a href="index.html">Home One</a>
+                                     </li>
+                                     <li>
+                                        <a href="index-2.html">Home Two</a>
+                                     </li>
+                                     <li class="current-menu-item">
+                                        <a href="index.html">Home Three</a>
+                                     </li>
+                                     <li>
+                                        <a href="index-4.html">Home Four</a>
+                                     </li>
+                                     <li>
+                                        <a href="index-5.html">Home Five</a>
+                                     </li>
+                                     <li>
+                                        <a href="index-6.html">Home Six</a>
+                                     </li>
+                                     <li>
+                                        <a href="index-7.html">Home Seven</a>
+                                     </li>
+                                     <li>
+                                        <a href="index-8.html">Home Eight</a>
+                                     </li>
+                                     <li>
+                                        <a href="index-9.html">Home Nine</a>
+                                     </li>
+                                     <li>
+                                        <a href="index-10.html">Home Ten</a>
+                                     </li>
+                                  </ul>
+                            </li>
+                            <li class="has-dropdown">
+                               <a href="index-light.html">Light Mode</a>
+                               <ul class="sub-menu">
+                                     <li>
+                                        <a href="index-light.html">Home One</a>
+                                     </li>
+                                     <li>
+                                        <a href="index-2-light.html">Home Two</a>
+                                     </li>
+                                     <li>
+                                        <a href="index-3-light.html">Home Three</a>
+                                     </li>
+                                     <li>
+                                        <a href="index-4-light.html">Home Four</a>
+                                     </li>
+                                     <li>
+                                        <a href="index-5-light.html">Home Five</a>
+                                     </li>
+                                     <li>
+                                        <a href="index-6-light.html">Home Six</a>
+                                     </li>
+                                     <li>
+                                        <a href="index-7-light.html">Home Seven</a>
+                                     </li>
+                                     <li>
+                                        <a href="index-8-light.html">Home Eight</a>
+                                     </li>
+                                     <li>
+                                        <a href="index-9-light.html">Home Nine</a>
+                                     </li>
+                                     <li>
+                                        <a href="index-10-light.html">Home Ten</a>
+                                     </li>
+                               </ul>
+                            </li>
+                         </ul>
+                      </li> -->
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <!-- <li><a href="services.html">Services</a></li> -->
+                        <li><a href="portfolio.html">Portfolios</a></li>
+                        <li><a href="service.html">Services</a></li>
+                        <!-- <li class="has-dropdown">
+                          <a href="blog.html">Blog</a>
+                          <ul class="sub-menu">
+                              <li>
+                                  <a href="blog.html">Blog</a>
+                              </li>
+                              <li>
+                                  <a href="blog-details.html">Blog Details</a>
+                              </li>
+                          </ul>
+                      </li> -->
+                        <li><a href="contact.html">Contact</a></li>
+                     </ul>
+                  </nav>
+               </div>
+               <div class="mobile-menu d-lg-none"></div>
+               <div class="header-media d-none d-lg-inline-flex">
+                  <ul class="ul-reset social-icons">
+                     <li>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                     </li>
+                     <li>
+                        <a href="#"><i class="fa-light fa-basketball"></i></a>
+                     </li>
+                     <li>
+                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                     </li>
+                     <li>
+                        <a href="#"><i class="fa-brands fa-github"></i></a>
+                     </li>
+                  </ul>
+               </div>
+               <div class="menu-bar d-lg-none">
+                  <button>
+                     <span></span>
+                     <span></span>
+                     <span></span>
+                     <span></span>
+                  </button>
+               </div>
+            </div>
+         </div>
+      </div>
+   </header>
+   <!-- end: Header Area -->
+
+   <main class="site-content" id="content">
+      <!-- Hero Banner -->
+      <section class="hero-banner">
+         <div class="container">
+            <h1>WHO WE ARE</h1>
+            <div class="red-line"></div>
+            <p class="hero-subtitle">Wave Hospitality Group is a family-owned and operated company
+               with over a decade of experience in managing hotels and restaurants.
+               Our diverse portfolio spans top hotel brands and a growing number of successful food & beverage ventures.
+               We combine operational expertise with a personal touch, ensuring every property—hospitality or
+               restaurant—delivers
+               quality, comfort, and consistency.
+            </p>
+         </div>
+      </section>
+
+      <!-- About Content -->
+      <section class="about-content dark-section">
+         <div class="container">
+            <!-- Our Story -->
+            <div class="about-section">
+               <div class="section-head">
+                  <h2>Our Story</h2>
+               </div>
+               <p class="lead-text">
+                  Founded as a family business, Wave Hospitality Group has grown into a trusted name in the hospitality
+                  industry across Canada. Our journey began with a vision to create exceptional guest experiences
+                  through personalized service and operational excellence. Today, we manage a diverse portfolio of
+                  hotels and restaurants, partnering with top brands while maintaining our core values of
+                  family, integrity, and exceptional service.
+               </p>
+            </div>
+
+            <!-- Core Values -->
+            <div class="values-section">
+               <div class="section-head">
+                  <h2>Our Core Values</h2>
+               </div>
+               <div class="values-grid">
+                  <div class="value-item wow fadeInUp" data-wow-delay=".1s">
+                     <div class="value-icon">
+                        <i class="fa-solid fa-star"></i>
+                     </div>
+                     <h3>Excellence</h3>
+                     <div class="red-line"></div>
+                     <p>We strive for perfection in every detail of our service, ensuring each guest experiences
+                        the highest standards of hospitality.</p>
+                  </div>
+                  <div class="value-item wow fadeInUp" data-wow-delay=".2s">
+                     <div class="value-icon">
+                        <i class="fa-solid fa-heart"></i>
+                     </div>
+                     <h3>Family-Oriented</h3>
+                     <div class="red-line"></div>
+                     <p>As a family-owned business, we treat our team members, partners, and guests like family,
+                        creating warm, welcoming environments.</p>
+                  </div>
+                  <div class="value-item wow fadeInUp" data-wow-delay=".3s">
+                     <div class="value-icon">
+                        <i class="fa-solid fa-handshake"></i>
+                     </div>
+                     <h3>Integrity</h3>
+                     <div class="red-line"></div>
+                     <p>We operate with honesty and transparency in all our business relationships,
+                        building trust with our partners and clients.</p>
+                  </div>
+                  <div class="value-item wow fadeInUp" data-wow-delay=".4s">
+                     <div class="value-icon">
+                        <i class="fa-solid fa-chart-line"></i>
+                     </div>
+                     <h3>Growth</h3>
+                     <div class="red-line"></div>
+                     <p>We are committed to continuous improvement, expanding our portfolio while
+                        maintaining the quality and consistency our partners expect.</p>
+                  </div>
+               </div>
+            </div>
+
+            <!-- Milestones -->
+            <div class="milestones-section">
+               <div class="section-head">
+                  <h2>Our Journey</h2>
+               </div>
+               <div class="milestones-grid">
+                  <div class="milestone-item wow fadeInUp" data-wow-delay=".1s">
+                     <div class="milestone-year">2010</div>
+                     <h3>Foundation</h3>
+                     <p>Wave Hospitality Group opens its doors, establishing itself as a family-owned hospitality
+                        management company with a focus on service excellence.</p>
+                  </div>
+                  <div class="milestone-item wow fadeInUp" data-wow-delay=".2s">
+                     <div class="milestone-year">2013</div>
+                     <h3>First Expansion</h3>
+                     <p>Expansion into multiple hotel brands, adding several properties to our growing portfolio and
+                        establishing our management expertise.</p>
+                  </div>
+                  <div class="milestone-item wow fadeInUp" data-wow-delay=".3s">
+                     <div class="milestone-year">2016</div>
+                     <h3>Restaurant Division</h3>
+                     <p>Launch of our restaurant management division, bringing our hospitality expertise to the food &
+                        beverage industry with notable success.</p>
+                  </div>
+                  <div class="milestone-item wow fadeInUp" data-wow-delay=".4s">
+                     <div class="milestone-year">2020</div>
+                     <h3>Strategic Growth</h3>
+                     <p>Despite industry challenges, we maintained operational excellence and emerged stronger,
+                        expanding our portfolio with innovative hospitality solutions.</p>
+                  </div>
+               </div>
+            </div>
+
+            <!-- Achievements -->
+            <div class="achievements-section">
+               <h2>Recognition & Awards</h2>
+               <div class="achievements-grid">
+                  <div class="achievement-item">
+                     <div class="achievement-icon">
+                        <i class="fa-solid fa-trophy"></i>
+                     </div>
+                  </div>
+                  <div class="col-lg-6 col-md-12 mb-4">
+                     <div class="services-card wow fadeInUp" data-wow-delay=".2s">
+                        <h3><i class="fa-solid fa-utensils"></i> Restaurant Services</h3>
+                        <ul class="services-list">
+                           <li><i class="fa-solid fa-check"></i> Restaurant Management</li>
+                           <li><i class="fa-solid fa-check"></i> Franchise Operations</li>
+                           <li><i class="fa-solid fa-check"></i> Tenant Leasing & Oversight</li>
+                           <li><i class="fa-solid fa-check"></i> F&B Profitability Consulting</li>
+                           <li><i class="fa-solid fa-check"></i> Guest Experience Enhancement</li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+            </div>
+
+            <!-- Why Choose Us -->
+            <div class="why-choose-section mt-5">
+               <div class="section-head">
+                  <h2>Why Choose Wave Hospitality</h2>
+               </div>
+               <div class="why-choose-grid mt-4">
+                  <div class="why-choose-item wow fadeInUp" data-wow-delay=".1s">
+                     <div class="why-choose-icon">
+                        <i class="fa-solid fa-award"></i>
+                     </div>
+                     <div class="why-choose-content">
+                        <h3>Industry Experience</h3>
+                        <p>Over 10 Years of Excellence in Hotels & Restaurants</p>
+                     </div>
+                  </div>
+                  <div class="why-choose-item wow fadeInUp" data-wow-delay=".2s">
+                     <div class="why-choose-icon">
+                        <i class="fa-solid fa-handshake"></i>
+                     </div>
+                     <div class="why-choose-content">
+                        <h3>Trusted Partners</h3>
+                        <p>Trusted by Leading Hotel & Restaurant Brands</p>
+                     </div>
+                  </div>
+                  <div class="why-choose-item wow fadeInUp" data-wow-delay=".3s">
+                     <div class="why-choose-icon">
+                        <i class="fa-solid fa-heart"></i>
+                     </div>
+                     <div class="why-choose-content">
+                        <h3>Family Values</h3>
+                        <p>Family-Owned with a Passion for Service</p>
+                     </div>
+                  </div>
+                  <div class="why-choose-item wow fadeInUp" data-wow-delay=".4s">
+                     <div class="why-choose-icon">
+                        <i class="fa-solid fa-chart-line"></i>
+                     </div>
+                     <div class="why-choose-content">
+                        <h3>Scalable Operations</h3>
+                        <p>Scalable Operations with Local Commitment</p>
+                     </div>
+                  </div>
+                  <div class="why-choose-item wow fadeInUp" data-wow-delay=".5s">
+                     <div class="why-choose-icon">
+                        <i class="fa-solid fa-people-group"></i>
+                     </div>
+                     <div class="why-choose-content">
+                        <h3>Proven Success</h3>
+                        <p>Proven Success in Hotel + Restaurant Synergy</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <!-- Call to Action: Let's Build Something Great Together -->
+      <section class="cta-section enhanced-cta-section">
+         <div class="container">
+            <div class="cta-card glass-card wow fadeInUp" data-wow-delay=".2s">
+               <div class="cta-inner">
+                  <h2 class="cta-title gradient-text">Let's Build Something Great Together</h2>
+                  <p class="cta-desc">
+                     Looking for experienced operators to manage your hospitality or restaurant asset? Whether it's a
+                     franchise, independent concept, or tenant-managed space, <b>Wave Hospitality Group</b> is your
+                     trusted partner.
+                  </p>
+                  <a href="contact.html" class="cta-btn">
+                     Contact Us
+                     <span class="btn-icon">
+                        <i class="fa-solid fa-arrow-right"></i>
+                     </span>
+                  </a>
+               </div>
+               <div class="cta-glow"></div>
+            </div>
+         </div>
+      </section>
+   </main>
+
+   <!-- FOOTER AREA START -->
+   <footer class="tj-footer-area style-3">
+      <div class="container">
+         <div class="row">
+            <div class="col-md-12 text-center">
+               <div class="header-media text-center">
+                  <ul class="ul-reset social-icons">
+                     <li>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                     </li>
+                     <li>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                     </li>
+                     <li>
+                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                     </li>
+                     <li>
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                     </li>
+                  </ul>
+               </div>
                <div class="footer-logo-box">
-                  <a href="#"><img src="assets/img/logo/wave.png" class="img-logo" alt="Logo"></a>
+                  <a href="index.html"><img src="assets/img/logo/wave.png" alt="Logo" class="img-logo"></a>
                </div>
                <div class="footer-menu">
                   <nav>
                      <ul>
+                        <li><a href="index.html">Home</a></li>
                         <li><a href="about.html">About</a></li>
-                        <!-- <li><a href="services.html">Services</a></li> -->
                         <li><a href="portfolio.html">Portfolio</a></li>
                         <li><a href="contact.html">Contact</a></li>
                      </ul>
                   </nav>
                </div>
                <div class="copy-text">
-                  <p>© 2024 All rights reserved by <a href="#" target="_blank">ThemeJunction</a></p>
+                  <p>© 2024 All rights reserved by <a href="#" target="_blank">Wave Hospitality Group</a></p>
                </div>
             </div>
          </div>
@@ -797,4 +1466,5 @@
    <script src="assets/js/meanmenu.js"></script>
    <script src="assets/js/main.js"></script>
 </body>
-</html> 
+
+</html>

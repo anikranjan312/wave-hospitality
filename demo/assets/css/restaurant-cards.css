@@ -6,6 +6,7 @@
     transition: transform 0.4s ease, box-shadow 0.4s ease;
     color: white;
     position: relative;
+    height: 100%;
   }
   
   .restaurant-card:hover {
