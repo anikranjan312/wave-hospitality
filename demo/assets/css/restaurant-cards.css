@@ -55,7 +55,7 @@
   
   .view-btn {
     margin-top: 10px;
-    background: #ff4a4a;
+    background: #2c4e8c;
     color: white;
     border: none;
     border-radius: 12px;
@@ -66,6 +66,6 @@
   }
   
   .view-btn:hover {
-    background: #e03939;
+    background: #2e5eb8;
   }
   

@@ -55,7 +55,7 @@
 .tj-roll-section {
 	position: relative;
 	z-index: 9;
-	background-color: var(--tj-black);
+	background-color: #fff;
 	padding: 5px 0;
 	overflow: hidden;
 	transform: rotate(-3deg);

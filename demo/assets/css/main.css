@@ -1634,7 +1634,7 @@ body.loaded {
 }
 .portfolio-filter .button-group .active-bg {
 	border-radius: 50px;
-	top: 0px;
+	top: 5px;
 	bottom: 0px;
 	left: 0px;
 	right: 0px;
